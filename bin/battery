@@ -1,0 +1,4 @@
+#!/bin/sh
+
+perl -e "printf \"%.2f%% (%s)\\n\", `cat /sys/class/power_supply/BAT1/charge_now`/`cat /sys/class/power_supply/BAT1/charge_full`*100.0, '`cat /sys/class/power_supply/BAT1/status`'";
+
