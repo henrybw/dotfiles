@@ -1,0 +1,473 @@
+http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/ Using Git and Github to Manage Your Dotfiles | smalley creative blog
+https://www.google.com/search?q=git%20dotfiles git dotfiles - Google Search
+https://bitbucket.org/hbw/dotfiles hbw / dotfiles — Bitbucket
+https://bitbucket.org/repo/create Create a repository — Bitbucket
+https://bitbucket.org/ hbw / home — Bitbucket
+https://bitbucket.org/account/signin/ Log in — Bitbucket
+https://bitbucket.org/account/signin/?next=/ Log in — Bitbucket
+https://www.google.com/search?q=bitbucket bitbucket - Google Search
+https://bbs.archlinux.org/viewtopic.php?id=156687 [Solved] i3-wm install throws invalid or corrupted package error. (Page 1) / Pacman & Package Upgrade Issues / Arch Linux Forums
+https://www.google.com/search?q=i3-wm%20delete%20package i3-wm delete package - Google Search
+https://www.google.com/search?q=arch%20change%20date%20time arch change date time - Google Search
+https://wiki.archlinux.org/index.php/time#Set_clock Time - ArchWiki
+http://nouveau.freedesktop.org/wiki/FeatureMatrix/ FeatureMatrix
+https://wiki.archlinux.org/index.php/Nouveau Nouveau - ArchWiki
+https://wiki.archlinux.org/index.php/Nvidia NVIDIA - ArchWiki
+https://www.archlinux.org/packages/?name=nvidia Arch Linux - Package Database
+http://nouveau.freedesktop.org/wiki/CodeNames/ CodeNames
+http://www.nvidia.com/object/IO_32667.html What's a legacy driver?
+http://www.nvidia.com/Download/index.aspx Drivers - Download NVIDIA Drivers
+https://bbs.archlinux.org/viewtopic.php?id=127947 xorg and GT 520 problem (Page 1) / Applications & Desktop Environments / Arch Linux Forums
+https://www.google.com/search?q=space%20opens%20windows%20boot%20manager%20instead%20of%20gummiboot space opens windows boot manager instead of gummiboot - Google Search
+https://www.google.com/search?q=gummiboot%20show%20menu%20by%20default#q=gummiboot+show+menu+by+default&start=20 (null)
+https://www.google.com/search?q=gummiboot%20show%20menu%20by%20default#q=gummiboot+show+menu+by+default&start=10 (null)
+https://www.google.com/search?q=gummiboot%20show%20menu%20by%20default gummiboot show menu by default - Google Search
+https://wiki.archlinux.org/index.php/Gummiboot Gummiboot - ArchWiki
+https://bugs.archlinux.org/task/34191 FS#34191 : [gummiboot] Avoiding unconditional execution of setup on install/upgrade
+https://www.google.com/search?q=gummiboot%20set%20boot%20order gummiboot set boot order - Google Search
+https://www.google.com/search?q=gummiboot%20windows%20boot%20entry gummiboot windows boot entry - Google Search
+http://www.rodsbooks.com/efi-bootloaders/index.html Managing EFI Boot Loaders for Linux
+http://www.rodsbooks.com/efi-bootloaders/gummiboot.html Managing EFI Boot Loaders for Linux: Using gummiboot
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0CDMQFjAC&url=http%3A%2F%2Fwww.rodsbooks.com%2Fefi-bootloaders%2Fgummiboot.html&ei=OqgBU5TzM8-FogTSo4HwBg&usg=AFQjCNF1dtjDFQg0cfHdvi-Ex3HUsoxrcw&bvm=bv.61535280,d.cGU (null)
+https://www.google.com/search?q=windows%20boot%20manager%20overrides%20gummiboot#q=gummiboot+make+linux+boot+by+default+uefi (null)
+https://www.google.com/search?q=windows%20boot%20manager%20overrides%20gummiboot#q=make+linux+boot+by+default+uefi (null)
+https://www.google.com/search?q=windows%20boot%20manager%20overrides%20gummiboot#q=gummiboot+doesn't+activate+by+default (null)
+https://www.google.com/search?q=windows%20boot%20manager%20overrides%20gummiboot windows boot manager overrides gummiboot - Google Search
+https://wiki.archlinux.org/index.php/Boot_loaders Boot loaders - ArchWiki
+https://www.google.com/search?q=gummiboot%20without%20windows%20boot%20manager gummiboot without windows boot manager - Google Search
+http://freedesktop.org/wiki/Software/gummiboot/ gummiboot
+https://www.google.com/search?q=gummiboot gummiboot - Google Search
+http://ubuntuforums.org/showthread.php?t=1432765 [SOLVED] Screen went blank after Nvidia driver installed
+https://www.google.com/search?q=gummiboot%20wiki gummiboot wiki - Google Search
+https://www.google.com/search?q=nvidia%20black%20screen%20arch%20geforce%20520 nvidia black screen arch geforce 520 - Google Search
+http://www.reddit.com/r/archlinux/comments/1xxr04/confused_with_gummiboot_and_dual_booting/ Confused with gummiboot and dual booting : archlinux
+https://www.google.com/search?q=arch%20gummiboot%20dual%20boot%20windows arch gummiboot dual boot windows - Google Search
+https://www.google.com/search?q=how%20to%20get%20into%20gummiboot%20menu how to get into gummiboot menu - Google Search
+https://www.archlinux.org/packages/?name=nvidia-304xx Arch Linux - Package Database
+https://www.google.com/search?q=nvidia-325xx nvidia-325xx - Google Search
+https://www.archlinux.org/packages/extra/i686/nvidia-304xx-utils/ Arch Linux - nvidia-304xx-utils 304.117-1 (i686)
+https://www.archlinux.org/packages/extra/i686/nvidia-325xx-utils/ Arch Linux - Page Not Found
+https://aur.archlinux.org/packages/nvidia-325xx/ AUR (en) - Page Not Found
+https://aur.archlinux.org/packages/nvidia-304xx/ AUR (en) - Page Not Found
+https://www.google.com/search?q=nvidia-304xx nvidia-304xx - Google Search
+https://www.archlinux.org/packages/extra/x86_64/nvidia-304xx-utils/ Arch Linux - nvidia-304xx-utils 304.117-1 (x86_64)
+https://aur.archlinux.org/packages/nvidia-173xx/ AUR (en) - nvidia-173xx
+https://wiki.archlinux.org/index.php/NVIDIA NVIDIA - ArchWiki
+https://www.google.com/search?q=nvidia%20geforce%205%20black%20screen%20arch nvidia geforce 5 black screen arch - Google Search
+https://bbs.archlinux.org/viewtopic.php?id=154466 [SOLVED] Installation Nvidia drivers (Page 1) / Installation / Arch Linux Forums
+https://bbs.archlinux.org/viewtopic.php?id=158667&p=2 [SOLVED] Installed Nvidia driver, black screen after boot (Page 2) / Newbie Corner / Arch Linux Forums
+https://aur.archlinux.org/packages/nvidia-173xx-lts/ AUR (en) - nvidia-173xx-lts
+https://aur.archlinux.org/packages/nvidia-173xx-utils/ AUR (en) - nvidia-173xx-utils
+https://wiki.archlinux.org/index.php/Arch_User_Repository Arch User Repository - ArchWiki
+https://www.google.com/search?q=aur aur - Google Search
+https://aur.archlinux.org/packages/aurget/ AUR (en) - aurget
+https://www.google.com/search?q=aurget aurget - Google Search
+https://bbs.archlinux.org/viewtopic.php?pid=1237282#p1237282 [SOLVED] Installed Nvidia driver, black screen after boot (Page 1) / Newbie Corner / Arch Linux Forums
+https://bbs.archlinux.org/viewtopic.php?id=158667 [SOLVED] Installed Nvidia driver, black screen after boot (Page 1) / Newbie Corner / Arch Linux Forums
+https://www.google.com/search?q=nvidia%20black%20screen%20arch%20linux nvidia black screen arch linux - Google Search
+https://wiki.archlinux.org/index.php/sudo Sudo - ArchWiki
+https://www.google.com/search?q=sudo%20not%20found%20arch sudo not found arch - Google Search
+https://wiki.archlinux.org/index.php/Fonts Fonts - ArchWiki
+https://wiki.archlinux.org/index.php/Beginners'_Guide Beginners' guide - ArchWiki
+http://www.reddit.com/r/archlinux/comments/1rjdaz/dual_boot_windows_loader_efi/ Dual boot + Windows Loader + EFI : archlinux
+https://www.google.com/search?q=gummiboot%20windows%207#q=gummiboot+windows+7 (null)
+https://www.google.com/search?q=gummiboot%20windows%207 gummiboot windows 7 - Google Search
+https://wiki.archlinux.org/index.php/multihead Multihead - ArchWiki
+https://www.google.com/search?q=arch%20multi%20monitors arch multi monitors - Google Search
+https://wiki.archlinux.org/index.php/MS_Fonts MS Fonts - ArchWiki
+https://wiki.archlinux.org/index.php/Users_and_Groups#User_management Users and Groups - ArchWiki
+http://lists.rivendellaudio.org/pipermail/rivendell-dev/2011-June/012631.html [RDD] hyphens in host name ok?
+https://www.google.com/search?q=hostname%20with%20hyphen hostname with hyphen - Google Search
+http://technet.microsoft.com/en-us/library/cc959336.aspx Complying with Name Restrictions for Hosts and Domains
+https://www.google.com/search?q=arch%20beginners%20guide arch beginners guide - Google Search
+https://www.google.com/search?q=mad%20world mad world - Google Search
+http://www.eightforums.com/installation-setup/5258-windows-go-won-t-go-me.html Solved Windows-To-Go won't go for me.
+https://www.google.com/search?q=f%20switch%20bcdboot f switch bcdboot - Google Search
+https://www.google.com/search?q=bcdboot%20%2Ff%20uefi%20windows%207#q=bcdboot+%2Ff+uefi+windows+7 (null)
+https://www.google.com/search?q=bcdboot%20%2Ff%20uefi%20windows%207 bcdboot /f uefi windows 7 - Google Search
+https://gitorious.org/tianocore_uefi_duet_builds/pages/Windows_x64_BIOS_to_UEFI Tianocore_UEFI_DUET_Builds - Windows_x64_BIOS_to_UEFI - Open wiki - Gitorious
+https://www.google.com/search?q=tao%20framework tao framework - Google Search
+https://www.facebook.com/ Welcome to Facebook - Log In, Sign Up or Learn More
+https://www.google.com/search?q=f f - Google Search
+http://www.debianhelp.co.uk/ddcommand.htm Backup using dd command in linux
+https://www.google.com/search?q=edit%20partition%20archboot%20iso edit partition archboot iso - Google Search
+https://www.google.com/search?q=backup%20using%20dd backup using dd - Google Search
+https://www.google.com/search?q=zsh%20set%20vi%20mode zsh set vi mode - Google Search
+https://wiki.archlinux.org/index.php/archboot Archboot - ArchWiki
+https://www.google.com/search?q=parted%20on%20archiso parted on archiso - Google Search
+http://lists.unix-ag.uni-kl.de/pipermail/vpnc-devel/2004-June/000083.html [vpnc-devel] libgcrypt.so.11 missing
+https://bbs.archlinux.org/viewtopic.php?id=174825 "google-chrome" doesn't work with latest "libgcrypt" (Page 1) / [testing] Repo Forum / Arch Linux Forums
+https://www.google.com/search?q=libgcrpyt.so.11%20no%20such%20file libgcrpyt.so.11 no such file - Google Search
+https://bbs.archlinux.org/viewtopic.php?id=175639 [SOLVED] Updating libgcrypt to libgcrypt 1.6.0-1 fails (Page 1) / Pacman & Package Upgrade Issues / Arch Linux Forums
+https://www.google.com/search?q=libgcrypt.so.11%20cannot%20open%20shared%20object%20file libgcrypt.so.11 cannot open shared object file - Google Search
+https://www.google.com/search?q=pacman%20corrupted%20pgp%20signature#q=pacman+corrupted+pgp+signature+thorsten (null)
+https://www.google.com/search?q=pacman%20corrupted%20pgp%20signature pacman corrupted pgp signature - Google Search
+https://bbs.archlinux.org/viewtopic.php?pid=1115667 [Solved] invalid or corrupted database (PGP signature) (Page 1) / Pacman & Package Upgrade Issues / Arch Linux Forums
+https://bbs.archlinux.org/viewtopic.php?id=142798&p=2 [Solved] invalid or corrupted database (PGP signature) (Page 2) / Pacman & Package Upgrade Issues / Arch Linux Forums
+https://www.google.com/search?q=parted%20doesn't%20have%20resize%20command parted doesn't have resize command - Google Search
+http://www.gnu.org/software/parted/manual/html_chapter/parted_2.html Parted User's Manual - 2. Using Parted
+https://www.google.com/search?q=parted%20move%20partition parted move partition - Google Search
+https://www.google.com/search?q=no%20screens%20found no screens found - Google Search
+https://www.google.com/search?q=pacman%20update%20keyring pacman update keyring - Google Search
+https://bbs.archlinux.org/viewtopic.php?id=66701 Startx command not found (Page 1) / Newbie Corner / Arch Linux Forums
+https://www.google.com/search?q=startx%20not%20installed startx not installed - Google Search
+https://wiki.archlinux.org/index.php/xorg Xorg - ArchWiki
+https://www.google.com/search?q=xorg%20start%20server%20arch xorg start server arch - Google Search
+https://www.google.com/search?q=start%20x%20server start x server - Google Search
+https://www.google.com/search?q=start%20xz start xz - Google Search
+https://wiki.archlinux.org/index.php/xorg#Installation Xorg - ArchWiki
+https://www.google.com/search?q=install%20xorg install xorg - Google Search
+http://www.msfn.org/board/topic/146911-diskpart-shrink-or-move-partition/ diskpart - shrink or move partition - Windows Server 2008 / 2008R2 / 2012 - MSFN Forum
+https://www.google.com/search?q=shift%20a%20partition#q=diskpart+shift+a+partition (null)
+https://ask.fedoraproject.org/en/question/7105/solved-how-do-i-resizeshift-my-partitions/ [Solved] How do I resize/shift my partitions? - Ask Fedora: Community Knowledge Base and Support Forum
+https://discussions.apple.com/thread/1424197 "Shift" partition with Drive Genius...: Apple Support Communities
+https://www.google.com/search?q=shift%20a%20partition shift a partition - Google Search
+https://www.google.com/search?q=efi%20partition%20for%20mbr efi partition for mbr - Google Search
+http://www.partitionwizard.com/resizepartition/resize-uefi-windows-8-system-partition.html The best way to resize UEFI Windows 8 system partition is highly recommended!
+https://www.google.com/search?q=repartition%20disk%20uefi repartition disk uefi - Google Search
+http://www.inference.phy.cam.ac.uk/prlw1/computing/ntfs.shtml Moving a NTFS partition
+https://www.google.com/search?q=mbr%20partition%20move%20offset mbr partition move offset - Google Search
+http://technet.microsoft.com/en-us/library/cc766465(v=ws.10).aspx DiskPart Command-Line Options
+https://www.google.com/search?q=edit%20alignment%20of%20existing%20partition#q=diskpart+edit+alignment+of+existing+partition (null)
+https://www.google.com/search?q=edit%20alignment%20of%20existing%20partition edit alignment of existing partition - Google Search
+https://www.google.com/webhp?tab=ww&ei=X2kBU9nqEIP0oAT8i4KABQ&ved=0CBQQ1S4 Google
+http://blogs.msdn.com/b/jimmymay/archive/2008/10/14/disk-partition-alignment-for-sql-server-slide-deck.aspx Disk Partition Alignment (Sector Alignment) for SQL Server: Part 1: Slide Deck - Jimmy May, Aspiring Geek: SQL Server Performance, Best Practices, & Productivity - Site Home - MSDN Blogs
+http://blog.bennett-scharf.com/2008/03/31/using-diskpart-to-align-a-windows-disk-partition/ Using Diskpart to Align a Windows Disk Partition | Bennett's Blog
+https://www.google.com/search?q=diskpart%20edit%20offset diskpart edit offset - Google Search
+https://accounts.google.com/ServiceLogin?hl=en&continue=https://www.google.com/search%3Fq%3Ddiskpart%2Bmove%2Boffset Sign in - Google Accounts
+https://www.google.com/search?q=diskpart%20move%20offset diskpart move offset - Google Search
+https://www.google.com/search?q=change%20partition%20offset%20windows change partition offset windows - Google Search
+http://blogs.msdn.com/b/amitjet/archive/2009/04/17/disk-partitioning-offset.aspx Disk Partitioning Offset - Amit's blog - Site Home - MSDN Blogs
+https://www.google.com/search?q=edit%20partition%20offset%20diskpart#q=edit+partition+offset+diskpart (null)
+https://www.google.com/search?q=edit%20partition%20offset%20diskpart edit partition offset diskpart - Google Search
+https://www.google.com/search?q=diskpart%20move%20offset%20of%20partition diskpart move offset of partition - Google Search
+http://technet.microsoft.com/en-us/library/cc727978(v=ws.10).aspx#BKMK_CMD (null)
+http://technet.microsoft.com/en-us/library/cc727978(v=ws.10).aspx Create a partition or logical drive: Storage Services; Local File Systems
+https://www.google.com/search?q=diskpart%20create%20partition diskpart create partition - Google Search
+https://www.google.com/search?q=50GB%20in%20MB 50GB in MB - Google Search
+https://www.google.com/search?q=(232-50)%20GB%20in%20MB (232-50) GB in MB - Google Search
+http://www.sevenforums.com/tutorials/2672-partition-volume-shrink.html Partition or Volume - Shrink - Windows 7 Help Forums
+http://www.sevenforums.com/tutorials/2670-partition-volume-extend.html Partition or Volume - Extend - Windows 7 Help Forums
+https://www.google.com/search?q=virtual%20disk%20service%20there%20is%20not%20enough%20usable%20space virtual disk service there is not enough usable space - Google Search
+https://www.google.com/search?q=(171%2B11)%20GB%20in%20MB (171+11) GB in MB - Google Search
+http://technet.microsoft.com/en-us/library/cc771473.aspx Extend a Basic Volume
+https://www.google.com/search?q=resize%20partition%20diskpart resize partition diskpart - Google Search
+http://www.tomshardware.com/answers/id-1663352/external-hdd-corrupt-mbr-fix.html External HDD has corrupt MBR how do I fix it [Solved] - Hard Drives - Storage
+https://www.google.com/search?q=fix%20corrupt%20mbr fix corrupt mbr - Google Search
+https://neosmart.net/forums/showthread.php?t=9214 Windows 7 Boot\BCD file is corrupt. Can't seem to fix it.
+https://www.google.com/search?q=bcdboot%20rebuild%20bcd bcdboot rebuild bcd - Google Search
+http://pcsupport.about.com/od/fixtheproblem/ht/rebuild-bcd-store-windows.htm How To Rebuild the BCD in Windows
+https://www.google.com/search?q=bcd%20restore%20boot%20files bcd restore boot files - Google Search
+https://social.technet.microsoft.com/wiki/contents/articles/14286.converting-windows-bios-installation-to-uefi.aspx Converting Windows BIOS installation to UEFI - TechNet Articles - United States (English) - TechNet Wiki
+https://www.google.com/search?q=mbr%20to%20gpt%20technet#q=convert+mbr+to+gpt+technet+no+data+loss (null)
+https://www.google.com/search?q=mbr%20to%20gpt%20technet#q=convert+mbr+to+gpt+technet (null)
+https://www.google.com/search?q=mbr%20to%20gpt%20technet mbr to gpt technet - Google Search
+http://technet.microsoft.com/en-us/library/cc725671.aspx Change a Master Boot Record Disk into a GUID Partition Table Disk
+http://www.sevenforums.com/general-discussion/191546-windows-7-repair-disc-can-skip-straight-command-prompt.html Windows 7 Repair Disc: Can skip straight to command prompt? - Windows 7 Help Forums
+https://www.google.com/search?q=windows%20recovery%20disk%20open%20command%20prompt windows recovery disk open command prompt - Google Search
+https://wiki.archlinux.org/index.php/NTFS-3G#Format_NTFS NTFS-3G - ArchWiki
+https://www.google.com/search?q=arch%20format%20ntfs arch format ntfs - Google Search
+http://askubuntu.com/questions/162174/how-do-i-use-unetbootin-to-make-a-bootable-windows-usb-installer boot - How do I use Unetbootin to make a bootable Windows USB installer? - Ask Ubuntu
+https://www.google.com/search?q=unetbootin%20windows unetbootin windows - Google Search
+http://www.webupd8.org/2010/10/create-bootable-windows-7-usb-drive.html Create A Bootable Windows 7 USB Drive From Linux (Tested On Ubuntu) ~ Web Upd8: Ubuntu / Linux blog
+https://www.google.com/search?q=arch%20linux%20dosfs arch linux dosfs - Google Search
+https://www.archlinux.org/packages/?sort=&arch=&repo=&q=dosfstools&maintainer=&last_update=&flagged=&limit=50 Arch Linux - Package Database
+https://bbs.archlinux.org/viewtopic.php?id=104354 [SOLVED] how to format FAT32 (Page 1) / Applications & Desktop Environments / Arch Linux Forums
+https://www.google.com/search?q=arch%20fat32 arch fat32 - Google Search
+http://askubuntu.com/questions/134545/how-to-get-unetbootin-to-recognize-mounted-usb-drive installation - How to get Unetbootin to recognize mounted USB drive? - Ask Ubuntu
+https://www.google.com/search?q=unetbootin%20arch%20drive%20not%20showing%20up unetbootin arch drive not showing up - Google Search
+https://wiki.archlinux.org/index.php/NTFS-3G#Manual_mounting NTFS-3G - ArchWiki
+https://www.google.com/search?q=mount%20as%20ntfs%20arch mount as ntfs arch - Google Search
+https://www.google.com/search?q=unmount%20linux unmount linux - Google Search
+https://www.google.com/search?q=unetbootin%20windows%20iso unetbootin windows iso - Google Search
+https://www.google.com/search?q=unetbootin unetbootin - Google Search
+https://www.google.com/search?q=create%20windows%20boot%20disk%20from%20iso%20on%20%20os%20x#q=create+windows+boot+usb+from+iso+on+arch (null)
+http://unetbootin.sourceforge.net/ UNetbootin - Homepage and Downloads
+https://www.archlinux.org/ Arch Linux
+https://www.google.com/search?q=create%20windows%20boot%20disk%20from%20iso%20on%20%20os%20x#q=create+windows+boot+usb+from+iso+on+linux (null)
+http://sourceforge.net/projects/unetbootin/files/UNetbootin/494/unetbootin-linux-494/download Download UNetbootin, Universal Netboot Installer from SourceForge.net
+https://www.linuxquestions.org/questions/linux-general-1/mount-dev-sdb1-is-not-a-valid-block-device-329834/ mount: /dev/sdb1 is not a valid block device
+https://www.google.com/search?q=mount%20is%20not%20a%20block%20device mount is not a block device - Google Search
+http://forum.proxmox.com/threads/8748-mount-block-device-dev-sdb1-is-write-protected-mounting-read-only mount: block device /dev/sdb1 is write-protected, mounting read-only
+https://www.google.com/search?q=mount%20not%20write%20protected mount not write protected - Google Search
+https://www.google.com/search?q=create%20windows%20boot%20disk%20from%20iso%20on%20%20os%20x#q=create+windows+boot+disk+from+iso+on+linux (null)
+https://www.google.com/search?q=create%20windows%20boot%20disk%20from%20iso%20on%20%20os%20x create windows boot disk from iso on os x - Google Search
+https://www.google.com/search?q=reboot%20and%20select%20proper%20boot%20device reboot and select proper boot device - Google Search
+http://answers.microsoft.com/en-us/windows/forum/windows_7-hardware/how-to-solve-reboot-and-select-proper-boot-device/7dfbd424-7526-4c20-8d8f-d1cc7e56ad8c How to solve, "Reboot and Select proper Boot device" - Microsoft Community
+http://njnnetwork.com/2009/12/the-ultimate-christmas-gift-by-my-cousin-steve-pate/ UNIX Filesystems ultimate Christmas Gift by my cousin Steve Pate | NJN Network
+http://www.network54.com/Forum/648955/message/1304745142/Why+do+you+want+to+use+an+undocumented+function+anyway- QBasic and QB64 Discussion Board: Why do you want to use an undocumented function anyway?
+https://www.google.com/search?q=getta%20byte%20getta%20byte getta byte getta byte - Google Search
+https://www.linuxquestions.org/questions/linux-general-1/dd-verbose-mode-313420/ dd verbose mode?
+https://www.google.com/search?q=dd%20verbose dd verbose - Google Search
+http://answers.microsoft.com/en-us/windows/forum/windows_7-system/this-version-of-system-recovery-options-is-not/16d5d1e6-b383-451f-8bfe-c7501c582fe0?page=1 This version of System Recovery Options is not compatible with the - Microsoft Community
+https://www.google.com/search?q=this%20version%20of%20system%20recovery%20options%20is%20not%20compatible this version of system recovery options is not compatible - Google Search
+http://www.experts-exchange.com/Apple/Operating_Systems/Q_28077303.html How to convert a FAT32 & HFS partition to a GPT partition?: Apple HFS FAT32, Storage Technology
+https://www.google.com/search?q=%22gptgen.exe%22%20%22unable%20to%20auto-determine%20the%20block%20size%20of%20the%20disk%22 "gptgen.exe" "unable to auto-determine the block size of the disk" - Google Search
+http://ubuntuforums.org/showthread.php?t=2154827 [SOLVED] Trying to Dual Boot Win7 + Ubuntu 12.04 LTS, screwed up the boot menu
+https://www.google.com/search?q=gptgen%20unable%20to%20auto-determine%20block%20size%20of%20the%20disk#q=%22gptgen%22+unable+to+auto-determine+block+size+of+the+disk gptgen unable to auto-determine block size of the disk - Google Search
+http://www.cliosport.net/forum/showthread.php?620326-Urgent-help-needed-Restoring-drive Urgent help needed - Restoring drive
+https://www.google.com/search?q=gptgen%20unable%20to%20auto-determine%20block%20size%20of%20the%20disk gptgen unable to auto-determine block size of the disk - Google Search
+https://www.google.com/search?q=bcdboot%20failure%20when%20attempting%20to%20copy%20boot%20files bcdboot failure when attempting to copy boot files - Google Search
+https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#EFI_System_Partition Unified Extensible Firmware Interface - ArchWiki
+https://wiki.archlinux.org/index.php/Beginners'_Guide#Create_filesystems Beginners' guide - ArchWiki
+http://neosmart.net/wiki/display/EBCD/Repairing%20the%20Windows%20Vista%20Bootloader (null)
+https://www.google.com/search?q=0xc0000f%20bcd#q=0xc000000f+bcd (null)
+http://superuser.com/questions/628038/boot-bcd-status-0xc000000f-error windows 7 - \Boot\ BCD Status: 0xc000000f error - Super User
+http://pcsupport.about.com/od/findbyerrormessage/a/bootmgr-is-missing.htm How To Fix the BOOTMGR is Missing Error in Windows 7, 8, & Vista
+https://www.google.com/search?q=bootmgr%20is%20missing bootmgr is missing - Google Search
+http://www.tomshardware.com/forum/43557-63-solved-bootmgr-missing-failed-windows-install [SOLVED]Bootmgr is missing after failed windows 7 install [Solved] - Configuration - Windows 7
+http://social.technet.microsoft.com/Forums/windows/en-US/6b16586e-574d-4a0b-ad68-aafcc7c599d1/bcdboot-failure-when-attempting-to-copy-boot-files?forum=w7itproinstall bcdboot Failure when attempting to copy boot files
+http://superuser.com/questions/431349/in-diskpart-when-i-type-select-disk-1-then-select-partition-1-i-get-no-par windows - In diskpart, when I type "select disk 1", then select partition 1, I get "No partition selected" - Super User
+https://www.google.com/search?q=windows%20diskpart%20not%20selecting%20partition%202 windows diskpart not selecting partition 2 - Google Search
+https://www.google.com/search?q=0xc0000f%20bcd 0xc0000f bcd - Google Search
+http://superuser.com/questions/469793/the-boot-selection-failed-because-a-required-device-is-inaccessible-0xc000000e windows 7 - The boot selection failed because a required device is inaccessible 0xc000000e - Super User
+https://www.google.com/search?q=boot%20configuration%20data%20could%20not%20be%20opened boot configuration data could not be opened - Google Search
+http://answers.microsoft.com/en-us/windows/forum/windows_7-system/error-the-boot-configuration-data-store-could-not/9e995bc8-141c-4ed0-9b17-2dbe92369202 Error: The boot configuration data store could not be opened. - Microsoft Community
+https://wiki.archlinux.org/index.php/File_Systems File systems - ArchWiki
+http://social.technet.microsoft.com/Forums/windows/en-US/8647c865-59a2-44dc-8be2-1a65731bbe38/bootbcd-error?forum=itprovistadeployment (null)
+http://www.tech-forums.net/forums/misc.php?threadid=188742&external_page=http%3A%2F%2Fneosmart.net%2Fwiki%2Fdisplay%2FEBCD%2FRepairing%2Bthe%2BWindows%2BVista%2BBootloader Tech & Computer Forums - External Link Notice
+http://www.tech-forums.net/forums/f9/start-up-error-file-boot-bcd-status-0xc000000f-188742/ Start up error - File:\Boot\BCD status 0xc000000f - Tech & Computer Forums
+http://en.wikipedia.org/wiki/Reboot_(computing) Reboot (computing) - Wikipedia, the free encyclopedia
+https://www.google.com/search?q=restart%20procedure%20hardware restart procedure hardware - Google Search
+https://www.google.com/search?q=enable%20uefi%20for%20bios%20windows%20install enable uefi for bios windows install - Google Search
+http://www.sevenforums.com/general-discussion/229651-enabling-uefi.html Enabling UEFI Solved - Windows 7 Help Forums
+https://www.google.com/search?q=enable%20uefi%20boot%20windows%207 enable uefi boot windows 7 - Google Search
+http://www.eightforums.com/tutorials/29504-bios-mode-see-if-windows-boot-uefi-legacy-mode.html BIOS Mode - See if Windows Boot in UEFI or Legacy Mode
+https://www.google.com/search?q=windows%20am%20i%20in%20efi%20mode#q=windows+am+i+in+uefi+mode&spell=1 (null)
+http://www.tomshardware.com/answers/id-1837375/booting-windows-uefi-mode.html (null)
+https://www.google.com/search?q=SS SS - Google Search
+http://www.tomshardware.com/answers/id-1837375/booting-windows-uefi-mode.html#. (null)
+https://www.google.com/search?q=windows%20am%20i%20in%20efi%20mode windows am i in efi mode - Google Search
+http://en.wikipedia.org/wiki/EFI_System_partition EFI System partition - Wikipedia, the free encyclopedia
+https://www.google.com/search?q=windows%20efi windows efi - Google Search
+https://www.google.com/search?q=set%20up%20windows%20uefi%20boot set up windows uefi boot - Google Search
+https://www.google.com/search?q=foo foo - Google Search
+https://www.google.com/search?q=bar bar - Google Search
+https://wiki.archlinux.org/index.php/Gparted-Live Gparted-Live - ArchWiki
+https://www.google.com/search?q=gparted%20arch%20iso gparted arch iso - Google Search
+https://wiki.archlinux.org/index.php/Partitioning#Choosing_between_GPT_and_MBR Partitioning - ArchWiki
+https://wiki.archlinux.org/index.php/Install_from_SSH Install from SSH - ArchWiki
+https://www.google.com/search?q=arch%20beginner%20guide arch beginner guide - Google Search
+https://www.google.com/search?q=baz baz - Google Search
+https://www.google.com/search?q=home home - Google Search
+https://www.google.com/search?q=ss ss - Google Search
+https://wiki.archlinux.org/index.php/Installation_Guide Installation guide - ArchWiki
+https://www.google.com/search?q=arch%20installation arch installation - Google Search
+https://wiki.archlinux.org/index.php/GRUB#Windows_installed_in_BIOS-MBR_mode (null)
+https://wiki.archlinux.org/index.php/GRUB GRUB - ArchWiki
+https://www.google.com/search?q=windows%20arch%20dual%20boot%20bios windows arch dual boot bios - Google Search
+http://portix.bitbucket.org/dwb/resources/manpage.html DWB(1)
+https://www.google.com/search?q=dwb%20move%20tab dwb move tab - Google Search
+http://www.chakra-project.org/wiki/index.php?title=Windows_Dual_Boot_Beginners'_Guide Windows Dual Boot Beginners' Guide - The Chakra Project
+https://bbs.archlinux.org/viewtopic.php?id=149267 [SOLVED] Dual boot windows 7 and arch Linux with seperate hard drives (Page 1) / Newbie Corner / Arch Linux Forums
+https://www.google.com/search?q=arch%20linux%20windows%20dual%20boot%20on%20separate%20hard%20drive arch linux windows dual boot on separate hard drive - Google Search
+http://i3wm.org/docs/userguide.html i3: i3 User’s Guide
+https://www.google.com/search?q=i3%20workspace%20back%20and%20forth i3 workspace back and forth - Google Search
+https://www.google.com/search?q=i3 i3 - Google Search
+https://www.google.com/search?q=google google - Google Search
+https://www.google.com/ Google
+https://play.spotify.com/user/tonikfunkture/playlist/5vVyqR55E8AE2xR735a3uY (null)
+https://play.spotify.com/user/tonikfunkture/playlist/7aJubFWePoh94uFAKOUhA3 (null)
+https://play.spotify.com/user/tonikfunkture/playlist/7KAXsY3W9gVjhDMknZZloU (null)
+https://play.spotify.com/user/countability/playlist/01xSyUi2ryuggENcvAr0Vf (null)
+https://play.spotify.com/ Spotify Web Player
+https://play.spotify.com/?s=direct&f=contextual Spotify Web Player
+http://dotshare.it/dots/443/ DotShare.it
+http://lmbgp.tumblr.com/post/76081145912/percentage-of-github-commit-messages-containing#_=_ Percentage of github commit messages containing... - Lavender Martini Border Gateway Protocol
+https://www.facebook.com/?ref=logo Facebook
+https://www.facebook.com/groups/seattlepotluck/ (null)
+http://mail.google.com/mail/u/0/?shva=1#inbox Inbox (1) - wvousfloater@gmail.com - Gmail
+https://accounts.youtube.com/accounts/SetSID?ssdc=1&sidt=ALWU2ctDRUrwmdladtM25XLKcrFah%2B7GZ45KP9DbNVBh2moR5YliuPooQ9AhHllFeGR5RMf6yv%2FxbsVyQoRZ0pfWs%2FoQWZVpwBTOsZeD7oOyUNgZYILeb4IdOLdA9sihqwv9TBhZ4FdE7%2BIJHkHNcJXYETlTR16oG93XXI5aAn1kcU3TNzWE76IoEI4YwuFfAxJJXLu5w3FMBuaJEGoPdW2%2FSqpNKRveXHjOw02niSqc5j9PYNygJ7BiWUmo30wjQnMuIlBoS9OkeocZF4RJkmm7UZeYinvObA7gkjTXxKEitd1xWbDMgPTp3qAQgrmWQrewv5gp%2FM2V&continue=http%3A%2F%2Fmail.google.com%2Fmail%2F%3Fauth%3DDQAAAIUAAACer867RlQQcYJ1m3wG-wsHJ3fvaWTJlPsHqC812nVZ0i6KmpM8lioc8vIvaq6uATSoX7SdUsEGM3UI7EDql6P8zTNl6Dtc4WYgs6jWnrWTL6BJKl0M0SpOKWHD3TA6vgqL7ap1zI6OxZxV3Ef3w37_OoY2eVnsQ3RdFSoPCxDxj0-IpbyG9nshxstkORSEVGk Redirecting
+https://accounts.google.com/SecondFactor?continue=http%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&scc=1&checkedDomains=youtube&checkConnection=youtube%3A288%3A1&pstMsg=1 Sign in - Google Accounts
+https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=http://mail.google.com/mail/&scc=1&ltmpl=default&ltmplcache=2&emr=1 Gmail
+https://wiki.archlinux.org/index.php/Dwb dwb - ArchWiki
+https://github.com/c00kiemon5ter/dotfiles/tree/master/.config/dwb (null)
+https://github.com/c00kiemon5ter/dotfiles/blob/master/.config/dwb/default/custom_keys (null)
+https://www.google.com/search?q=dwb%20custom_keys dwb custom_keys - Google Search
+https://www.google.com/search?q=dwb%20private%20browsing dwb private browsing - Google Search
+https://faq.i3wm.org/question/854/how-to-force-status-bar-update/ How to force status bar update - i3 FAQ
+https://www.google.com/search?q=force%20i3bar%20to%20refresh force i3bar to refresh - Google Search
+http://i3wm.org/i3status/manpage.html#_what_about_memory_usage_or_cpu_frequency i3: i3status(1)
+https://faq.i3wm.org/question/1492/how-could-i-show-cpu-and-memory-information-in-the-status-bar/ How could I show CPU and memory information in the status bar? - i3 FAQ
+https://www.google.com/search?q=i3status%20bar%20free%20ram i3status bar free ram - Google Search
+https://www.google.com/search?q=j4status j4status - Google Search
+http://i3wm.org/i3bar/manpage.html i3bar(1)
+https://www.google.com/search?q=using%20j4status%20with%20i3 using j4status with i3 - Google Search
+http://j4status.j4tools.org/man/j4status.html j4status
+https://www.google.com/search?q=j4-status j4-status - Google Search
+https://github.com/popoffka/i3lock popoffka/i3lock · GitHub
+http://build.i3wm.org/docs/i3-dmenu-desktop.html (null)
+https://www.google.com/search?q=i3-dmenu-desktop i3-dmenu-desktop - Google Search
+https://faq.i3wm.org/question/25/how-to-launch-applications-in-i3/ How to launch applications in i3? - i3 FAQ
+https://www.google.com/search?q=i3%20exec%20command#q=i3+execute+shell+command i3 exec command - Google Search
+https://faq.i3wm.org/question/403/executing-applications-exec/ Executing applications (exec) - i3 FAQ
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CCQQFjAA&url=https%3A%2F%2Ffaq.i3wm.org%2Fquestion%2F403%2Fexecuting-applications-exec%2F&ei=e473UpSdItXDoASMu4GgBA&usg=AFQjCNFq0q7x1xZ1IgFij1nrzKpPXPj_cg&bvm=bv.60983673,d.cGU&cad=rja (null)
+https://www.google.com/search?q=i3%20exec%20command i3 exec command - Google Search
+https://aur.archlinux.org/packages/i3lock-custom/ AUR (en) - i3lock-custom
+https://www.google.com/search?q=i3lock-custom i3lock-custom - Google Search
+http://manpages.ubuntu.com/manpages/natty/man1/i3lock.1.html Ubuntu Manpage: i3lock - improved screen locker
+https://www.google.com/search?q=i3lock%20manpage i3lock manpage - Google Search
+http://code.stapelberg.de/git/i3lock i3lock - improved screen locker
+http://i3wm.org/i3lock/ i3 - improved tiling wm
+http://i3wm.org/i3lock/i3lock-2.4.1.tar.bz2.asc (null)
+https://www.google.com/search?q=i3lock i3lock - Google Search
+https://www.google.com/search?q=linux%20lock%20image linux lock image - Google Search
+https://www.google.com/search?q=i3lock%20%22out%20of%20memory%22 i3lock "out of memory" - Google Search
+http://i3wm.org/i3status/manpage.html i3: i3status(1)
+https://www.google.com/search?q=i3lock%20could%20not%20load%20image%20out%20of%20memory i3lock could not load image out of memory - Google Search
+https://www.google.com/search?q=i3lock%20image%20support+archlinux i3lock image support archlinux - Google Search
+https://www.google.com/search?q=i3lock%20image%20support#q=i3lock+image+support (null)
+https://www.google.com/search?q=i3lock%20image%20support i3lock image support - Google Search
+https://www.google.com/search?q=i3status%20refresh%20faster i3status refresh faster - Google Search
+http://askubuntu.com/questions/65764/how-do-i-toggle-sound-with-amixer 11.10 - How do I toggle sound with amixer? - Ask Ubuntu
+https://www.google.com/search?q=amixer%20mute amixer mute - Google Search
+https://www.google.com/search?q=amixer%20exit amixer exit - Google Search
+http://www.brentwalther.net/blog/getting-started-and-going-further-with-i3-window-manager Getting started and going further with i3 window manager - Brent Walther's Blog
+https://www.google.com/search?q=alsamixer%20command%20line%20i3 alsamixer command line i3 - Google Search
+https://www.google.com/search?q=dwb%20man%20page dwb man page - Google Search
+https://www.google.com/search?q=list%20open%20workspaces%20i3 list open workspaces i3 - Google Search
+https://www.google.com/search?q=dwb%20spotify dwb spotify - Google Search
+https://www.google.com/search?q=flashplayer%20whitelist%20dwb flashplayer whitelist dwb - Google Search
+http://www.youtube.com/watch?v=5Nm61IoNdHg (null)
+http://www.youtube.com/results?search_query=thug%20notes%20pride%20and%20prejudice&sm=3 (null)
+http://www.youtube.com/results?search_query=thug%20notes&sm=3 (null)
+http://www.youtube.com/watch?v=h5EofwRzit0 Daft Punk - Get Lucky (Full Video) - YouTube
+https://www.archlinux.org/packages/extra/i686/flashplugin/ Arch Linux - flashplugin 11.2.202.336-1 (i686)
+https://www.archlinux.org/packages/?name=flashplugin Arch Linux - Package Database
+https://www.archlinux.org/packages/extra/x86_64/flashplugin/ Arch Linux - flashplugin 11.2.202.336-1 (x86_64)
+https://wiki.archlinux.org/index.php/chromium Chromium - ArchWiki
+https://www.google.com/search?q=uninstall%20pepper%20flash%20for%20flashplugin#q=uninstall+pepper+flash+for+flashplugin+archlinux (null)
+https://www.google.com/search?q=uninstall%20pepper%20flash%20for%20flashplugin uninstall pepper flash for flashplugin - Google Search
+http://manpages.ubuntu.com/manpages/saucy/man1/dwb.1.html Ubuntu Manpage: dwb - dynamic web browser
+https://www.google.com/search?q=dwb%20plugins.allow%20syntax dwb plugins.allow syntax - Google Search
+http://j4status.j4tools.org/ j4status — Plugin-based status line generator
+https://www.google.com/search?q=j4status%20memory j4status memory - Google Search
+https://www.google.com/search?q=j4status%20memory%20usage j4status memory usage - Google Search
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CCQQFjAA&url=http%3A%2F%2Fi3wm.org%2Fi3status%2Fmanpage.html&ei=QID3UvzvMsXzoASo14KABw&usg=AFQjCNGIiF91mWUZsfEKwn3M6FIiz2IdWQ&bvm=bv.60983673,d.cGU (null)
+https://www.google.com/search?q=i3status%20ram#q=i3status+free+memory (null)
+https://www.google.com/search?q=i3status%20ram i3status ram - Google Search
+https://www.google.com/search?q=dwb%20adblock dwb adblock - Google Search
+https://bbs.archlinux.org/viewtopic.php?id=132632 Show free RAM in i3status [SOLVED] (Page 1) / Applications & Desktop Environments / Arch Linux Forums
+https://www.google.com/search?q=adblocker%20dwb%20youtube#q=adblocker+dwb+youtube+ads (null)
+https://wiki.archlinux.org/index.php/Dwb#youtube-player (null)
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CCYQFjAA&url=https%3A%2F%2Fwiki.archlinux.org%2Findex.php%2FDwb&ei=x3_3UpK7JY3qoATp5oHIBA&usg=AFQjCNEx-WHh3fhf2Xzlt2KHE4M81kUqaA&bvm=bv.60983673,d.cGU (null)
+https://www.google.com/search?q=adblocker%20dwb%20youtube adblocker dwb youtube - Google Search
+https://wiki.archlinux.org/index.php/Dwb#Adblock dwb - ArchWiki
+http://portix.bitbucket.org/dwb/ dwb - a webkit web browser
+https://www.google.com/search?q=i3status%20volume i3status volume - Google Search
+http://www.youtube.com/results?search_query=daft%20punk&sm=3 (null)
+http://www.youtube.com/results?search_query=feh feh - YouTube
+http://www.youtube.com/ (null)
+https://www.google.com/search?q=dwb dwb - Google Search
+https://bugs.archlinux.org/task/21034 FS#21034 : i3lock: image feature broken, doesn't build
+https://bugzilla.redhat.com/show_bug.cgi?id=889092 Bug 889092 – i3lock does not support -i although this is explained in the manpage
+https://www.google.com/search?q=arch%20linux%20i3lock%20cant%20load%20images#q=arch+linux+i3lock+can't+load+images&spell=1 (null)
+https://www.google.com/search?q=arch%20linux%20i3lock%20cant%20load%20images arch linux i3lock cant load images - Google Search
+https://www.google.com/search?q=htop%20vi%20keybindings htop vi keybindings - Google Search
+https://github.com/robbyrussell/oh-my-zsh/wiki/themes Themes · robbyrussell/oh-my-zsh Wiki · GitHub
+https://wiki.archlinux.org/index.php/i3 i3 - ArchWiki
+https://www.google.com/search?q=i3lock%20could%20not%20load%20image%20cairo%20surface%20status%201 i3lock could not load image cairo surface status 1 - Google Search
+https://www.google.com/search?q=i3lock%20could%20not%20load%20image%20cairo%20surface%20status%201#q=i3lock+could+not+load+image+cairo+surface+status+1&start=10 (null)
+https://www.google.com/search?q=i3lock%20not%20opening%20images i3lock not opening images - Google Search
+https://github.com/jaseg/i3lock jaseg/i3lock · GitHub
+https://aur.archlinux.org/packages/i3lock-background/ AUR (en) - i3lock-background
+https://www.google.com/search?q=i3lock%20-i%20cairo%20error#q=i3lock+background+aur (null)
+https://www.google.com/search?q=i3lock%20-i%20cairo%20error#q=i3lock+background (null)
+https://www.google.com/search?q=i3lock%20-i%20cairo%20error i3lock -i cairo error - Google Search
+https://www.google.com/search?q=i3lock-background i3lock-background - Google Search
+https://faq.i3wm.org/question/274/use-desktop-wallpaper-as-i3lock-image/ Use desktop wallpaper as i3lock image - i3 FAQ
+https://bbs.archlinux.org/viewtopic.php?pid=1025507 The i3 thread (Page 24) / Applications & Desktop Environments / Arch Linux Forums
+https://www.google.com/search?q=i3lock%20cant%20open%20image#q=i3lock+can't+open+image (null)
+https://www.google.com/search?q=i3lock%20cant%20open%20image#q=i3lock+can't+open+image&spell=1 (null)
+https://www.google.com/search?q=i3lock%20cant%20open%20image (null)
+https://www.google.com/search?q=i3lock%20not%20opening%20image i3lock not opening image - Google Search
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CCQQFjAA&url=https%3A%2F%2Fwiki.archlinux.org%2Findex.php%2Fi3&ei=dHD3UsjrD5GJogTwwYHQCw&usg=AFQjCNE7E1yD3o5srWbqdK8drlcqb7XrOw (null)
+https://www.google.com/search?q=could%20not%20load%20surface%20cairo%201#q=i3lock+load+image+arch+linux (null)
+https://www.google.com/search?q=could%20not%20load%20surface%20cairo%201#q=i3lock+load+image (null)
+https://www.google.com/search?q=could%20not%20load%20surface%20cairo%201#q=i3lock+could+not+load+cairo+surface+status+1 (null)
+https://www.google.com/search?q=could%20not%20load%20surface%20cairo%201#q=i3lock+could+not+load+surface+cairo+1 could not load surface cairo 1 - Google Search
+https://faq.i3wm.org/question/547/i3lock-setting-the-image-background-in-ubuntu-precise/ i3lock: setting the image background in Ubuntu Precise - i3 FAQ
+https://www.google.com/search?q=could%20not%20load%20surface%20cairo%201#q=could+not+load+surface+cairo+1 (null)
+https://www.google.com/search?q=could%20not%20load%20surface%20cairo%201 could not load surface cairo 1 - Google Search
+https://wiki.archlinux.org/index.php/ranger ranger - ArchWiki
+http://i3wm.org/docs/userguide.html#_changing_named_workspaces_moving_to_workspaces i3: i3 User’s Guide
+https://www.google.com/search?q=oh%20my%20zsh oh my zsh - Google Search
+https://www.google.com/search?q=i3lock%20could%20not%20load%20image#q=i3lock+could+not+load+image (null)
+https://www.google.com/search?q=i3lock%20could%20not%20load%20image i3lock could not load image - Google Search
+https://www.google.com/search?q=ranger%20arch%20linux ranger arch linux - Google Search
+https://www.google.com/search?q=ranger ranger - Google Search
+https://faq.i3wm.org/question/1018/named-workspaces/ named workspaces - i3 FAQ
+https://www.google.com/search?q=go%20to%20new%20workspace%20i3 go to new workspace i3 - Google Search
+https://www.google.com/search?q=free%20space%20bigger%20than%20available%20space%20disk%20linux free space bigger than available space disk linux - Google Search
+http://crunchbang.org/forums/viewtopic.php?id=4430 Difference between 'free' and 'available' disk space (Page 1) / Help & Support (Stable) / CrunchBang Linux Forums
+https://answers.launchpad.net/ubuntu/+source/gnome-system-monitor/+question/8609 Question #8609 : Questions : “gnome-system-monitor” package : Ubuntu
+https://www.google.com/search?q=linux%20available%20vs%20free%20disk%20space linux available vs free disk space - Google Search
+http://www.cyberciti.biz/faq/linux-command-space-left-on-hard-disk-drive/ Linux: Find Out How Much Disk Space Left On Hard Drive
+https://www.google.com/search?q=available%20vs%20free%20disk%20space%20i3status available vs free disk space i3status - Google Search
+https://www.archlinux.org/packages/community/i686/guifications/ Arch Linux - guifications 2.16-3 (i686)
+http://www.knopwob.org/dunst/index.html Dunst - A customizable and lightweight notification-daemon
+https://www.google.com/search?q=pidgin%20arch%20dunst pidgin arch dunst - Google Search
+https://wiki.archlinux.org/index.php/Desktop_Notifications Desktop Notifications - ArchWiki
+https://www.google.com/search?q=pidgin%20libnotify%20arch%20dunst pidgin libnotify arch dunst - Google Search
+https://bitbucket.org/rw_grim/guifications2 rw_grim / guifications2 — Bitbucket
+https://www.guifications.org/ (null)
+https://www.google.com/search?q=guifications%20pidgin guifications pidgin - Google Search
+https://www.guifications.org/trac/wiki/Guifications 404 Not Found
+https://www.archlinux.org/packages/?name=guifications Arch Linux - Package Database
+https://wiki.archlinux.org/index.php/pidgin Pidgin - ArchWiki
+https://www.archlinux.org/packages/?name=pidgin-libnotify Arch Linux - Package Database
+https://www.google.com/search?q=arch%20linux%20pidgin%20libnotify arch linux pidgin libnotify - Google Search
+https://www.archlinux.org/packages/community/x86_64/pidgin-libnotify/ Arch Linux - pidgin-libnotify 0.14-8 (x86_64)
+https://www.google.com/search?q=dwb+google+search dwb google search - Google Search
+https://www.google.com/search?q=pidgin%20arch%20notify-send pidgin arch notify-send - Google Search
+https://www.google.com/search?q=bart bart - Google Search
+https://www.google.com/search?q=QUERY QUERY - Google Search
+http://new/ Error
+https://raw.github.com/ashinkarov/i3-extras/master/i3lock-wrapper (null)
+https://github.com/ashinkarov/i3-extras/blob/master/i3lock-wrapper (null)
+https://github.com/ashinkarov/i3-extras/ (null)
+https://github.com/NorthAntrim/i3-config/blob/master/.i3/conkyrc i3-config/.i3/conkyrc at master · NorthAntrim/i3-config · GitHub
+https://github.com/NorthAntrim/i3-config/tree/master/.i3 (null)
+https://github.com/NorthAntrim/i3-config/blob/master/.i3/conky (null)
+https://github.com/NorthAntrim/i3-config/blob/master/.i3/config (null)
+http://crunchbang.org/forums/viewtopic.php?id=18612 The great #! forums i3 thread (Page 1) / WM/DE Talk / CrunchBang Linux Forums
+https://github.com/NorthAntrim/i3-config (null)
+https://raw.github.com/patrickpowns/dotfiles/master/.conkyrc (null)
+https://github.com/patrickpowns/dotfiles/blob/master/.conkyrc dotfiles/.conkyrc at master · patrickpowns/dotfiles · GitHub
+http://www.reddit.com/r/unixporn/comments/1cvsgv/archi3_finally_done_setting_up_my_conky_i3status/ [Arch][i3] Finally done setting up my Conky i3status bar! : unixporn
+http://i.imgur.com/SZNC1sH.png SZNC1sH.png (1920x1080 pixels)
+http://imgur.com/a/V867j NorthAntrim - r/UnixPorn - Imgur
+https://www.google.com/search?q=conky+i3 conky i3 - Google Search
+http://i3wm.org/docs/user-contributed/conky-i3bar.html i3 - improved tiling wm
+https://wiki.archlinux.org/index.php/Dzen#Dzen_and_Conky Dzen - ArchWiki
+https://github.com/HarveyHunt/i3situation HarveyHunt/i3situation · GitHub
+https://github.com/enkore/i3pystatus enkore/i3pystatus · GitHub
+http://www.youtube.com/watch?v=pSPcQ7Sdoh4 (null)
+http://www.youtube.com/results?search_query=i3%20tiling%20wm&sm=3 (null)
+http://www.youtube.com/html5 YouTube
+https://productforums.google.com/forum/?hl=en#!forum/youtube Google Product Forums
+https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=http://mail.google.com/mail/?shva%3D1&scc=1&ltmpl=default&ltmplcache=2&emr=1 Gmail
+https://www.google.com/search?q=dwb+flash dwb flash - Google Search
+http://www.youtube.com/user/GoogleTechTalks?feature=watch (null)
+http://www.youtube.com/watch?v=QnYN2CTb1hM (null)
+http://www.youtube.com/results?search_query=i3%20window%20manager&sm=3 (null)
+http://youtube.copm/ Error
+http://portix.bitbucket.org/dwb/api/ dwb api: Index
+https://aur.archlinux.org/packages/wine-silverlight/ AUR (en) - wine-silverlight
+https://aur.archlinux.org/packages/dwb-gtk3-git/ AUR (en) - dwb-gtk3-git
+https://www.google.com/search?q=dwb#q=dwb (null)
+https://www.google.com/webhp Google
+https://accounts.youtube.com/accounts/SetSID?ssdc=1&sidt=ALWU2csge8vcbO4MMjkOEudpf6MmvFxWcSAr0W9KRUeFg6gZPpDlpRYCpBSUAR9LmjMuo9t9D9i0vK%2F6nwyWRhYWATQxT6d4DNBZYZPAgdCIwe49G3ftA3qOloQ5hLSgd68eWD8QCNTYYb4qd%2BANX6BkV4CM30q9qcxaFEd7SPx4mQb17v8ZoU7LUwGKvFrFJ5r8i8k64zDIyTCcq9DsX2U2ERmxaMlC164WBjKyrBWkHUgdUMRLlpVTHUQSaRtHUsHu10vgQMfOdYrf1IjheMmp5ZL8i2%2FUUsd8kPmjhJ45WwQKxdapMQMx7e%2FSG6BgL5Ow7vVOeS79&continue=http%3A%2F%2Fmail.google.com%2Fmail%2F%3Fshva%3D1%26auth%3DDQAAAIQAAACH-4ok-KxrTk6mkI8gFdSeq2GU-j03dzoBrDhQ-MHCDZebAJqfNiYH6My2nMONUs6tONPX4SABAON6ACVpudWymqJVoTEyz-7Zr_id9Z9UHTn8atD9nKcYSkGif5oR9sa1PvPNAwr-siILGYgk2MS_zSlGyfk7XQo6h9Z5Ll_-2M6hpNOJhTYZlExG-YuIeeM Redirecting
+https://accounts.google.com/SecondFactor?continue=http%3A%2F%2Fmail.google.com%2Fmail%2F%3Fshva%3D1&service=mail&scc=1&checkedDomains=youtube&checkConnection=youtube%3A715%3A1&pstMsg=1 Sign in - Google Accounts
+https://accounts.google.com/ServiceLoginAuth Gmail
+https://wiki.archlinux.org/index.php/Pipelight Pipelight - ArchWiki
+http:/?aurget Error
+http://aurget/ Error
+https://accounts.youtube.com/accounts/SetSID?ssdc=1&sidt=ALWU2ct%2F7ds%2FzMzC2Z%2BwMgPRTs7pvDtLOZlScNCyBkmZaw%2B2aegnoDn7UvdxYF03tpq4PKYzvJw9%2BlGXSVe0g8X0K7Nno7pTo2Rr8nnYjj33PqA7IP%2FZdvCtwTy2266dDTzi4%2Bxd4TfRqgUnlSdQg0KQ1BRj6l3sthZON6zx5HEats1j47fKg6mCiKH0yK%2BqGOOaUEhe1ZnYB0QkKjghYN%2FpQnxtRs0s3k12x%2B8oYiZa9VvMy0cNtGHy3blrndPtx2%2BFJfLc7f3laW514ffu%2BXNC%2BZ%2F7VRpWF0BQLZwXvRkE96OZm7a78kZ3f%2B3MWiMp85bSKAXPTdpP&continue=http%3A%2F%2Fmail.google.com%2Fmail%2F%3Fauth%3DDQAAAIYAAAA3HdoeMsMStdwq_7sZzhXN6fq8KypqwVf_LhlWC9cVdAGmsKd1BDqc1QcShEFrzOfn2i0AbHJ4Ei-wfUO74IioClzMAg1_L0Or790EI-YuZO01mfZkLvQpfXnHoDX58rcjFNEi1JKlh20ksfCPHXgUSGESUb8ONO5mtXNQdKocrq4sysd7o8RBseG1QEeo3Qw Redirecting
+https://accounts.google.com/SecondFactor?continue=http%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&scc=1&checkedDomains=youtube&checkConnection=youtube%3A853%3A1&pstMsg=1 Sign in - Google Accounts
+https://www.google.com/intl/en/ads/?fg=1 Google Ads
+https://www.google.com/#q=arch+linux+pipelight (null)
+https://accounts.google.com/SecondFactor Sign in - Google Accounts
+https://accounts.google.com/SecondFactor?continue=https%3A%2F%2Fwww.google.com%2F&hl=en&checkedDomains=youtube&checkConnection=youtube%3A912%3A1&pstMsg=1 Sign in - Google Accounts
+https://accounts.google.com/ServiceLogin?hl=en&continue=https://www.google.com/ Sign in - Google Accounts
+https://mail.google.com/intl/en/mail/help/about.html Gmail - Email from Google

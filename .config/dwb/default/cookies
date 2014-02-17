@@ -1,0 +1,10 @@
+# HTTP Cookie File
+# http://www.netscape.com/newsref/std/cookie_spec.html
+# This is a generated file!  Do not edit.
+# To delete cookies, use the Cookie Manager.
+
+#HttpOnly_.facebook.com	TRUE	/	FALSE	1455676499	datr	U3UBU39yM_POvKwWxH9aEgDp
+#HttpOnly_.google.com	TRUE	/verify	FALSE	1408410186	SNID	67=2P_F51rxBz9TjQXhMIZCkan_GTKqEJ_jFP3ELRPfEg=BkwVw5NUVmesdlnF
+#HttpOnly_.google.com	TRUE	/	FALSE	1408430624	NID	67=feJ-2BBYEXrzotxXvLtv3Gz2X541IW2oz7OfKKu_mC6j_pp8ycyEwOGuudbxIyR1WUbTBJXTMBr4D4f1fshNze8hV6uf2Y9NkZZ7HM2lzB1908VlWrWXcy4nrxPRcNEl0pRjvQ
+.google.com	TRUE	/	FALSE	1455095416	PREF	ID=a2e8a89698ff8dd9:U=d19246a728189c2f:FF=0:TM=1392023414:LM=1392023416:S=z7sWbjuozDuBIFun
+#HttpOnly_accounts.google.com	FALSE	/	TRUE	1455673318	GAPS	1:Zcyx6UKnTHN1-XZxqfwi0N72Sg_6pA:aliSj2HNheUT-fwe

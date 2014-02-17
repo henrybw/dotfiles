@@ -1,0 +1,19 @@
+set adblocker-filterlist /home/hbw/.config/dwb/adblock_lists
+1 : Beginners' guide - ArchWiki
+toggle enable-private-browsing
+set adblocker true
+set adblocker
+set adblocker?
+O new
+O
+help
+enew
+tabnew
+?
+tabnew google.com
+open gmail.com
+bd
+open google.com
+?google.com
+google.com
+e
