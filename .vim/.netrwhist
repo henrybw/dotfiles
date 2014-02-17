@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/htw/.vim/colors'
+let g:netrw_dirhist_2='/Users/htw/.vim'
+let g:netrw_dirhist_3='/Users/htw/.vim/autoload/csapprox'
+let g:netrw_dirhist_4='/home/hbw/.i3'
+let g:netrw_dirhist_5='/home/hbw/.config/dwb'
+let g:netrw_dirhist_6='/home/hbw/.config/i3status'
+let g:netrw_dirhist_7='/home/hbw/.config/dwb'
