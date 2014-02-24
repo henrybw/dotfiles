@@ -83,3 +83,5 @@ zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
 autoload select-word-style
 select-word-style shell
 
+eval $(ssh-agent) > /dev/null;
+

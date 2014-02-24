@@ -1,6 +1,7 @@
-" Michael's standard settings
-" Author: Michael Geddes
-" Version: 0.1
+filetype off
+call pathogen#infect()
+call pathogen#helptags()
+filetype plugin indent on
 
 " Smart tabbing / autoindenting
 set undolevels=100
@@ -176,36 +177,9 @@ set linebreak
 set ignorecase
 set smartcase
 
-set timeoutlen=100
+"set timeoutlen=100
 inoremap jk <ESC>
 inoremap JK <ESC>
 inoremap kj <ESC>
 inoremap KJ <ESC>
 
-"set nocompatible               " be iMproved
-"filetype off                   " required!
-
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-"Bundle 'gmarik/vundle'
-"Bundle 'Valloric/YouCompleteMe'
-
-filetype plugin indent on     " required!
-"set conceallevel=2
-"set concealcursor=vin
-let g:clang_snippets=1
-let g:clang_conceal_snippets=1
-let g:clang_snippets_engine='clang_complete'
-
-" Complete options (disable preview scratch window, longest removed to aways
-" show menu)
-set completeopt=menu,menuone
-
-" Limit popup menu height
-set pumheight=20
-
-" SuperTab completion fall-back 
-let g:SuperTabDefaultCompletionType='<c-x><c-u><c-p>'
