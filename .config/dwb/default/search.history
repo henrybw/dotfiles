@@ -1,3 +1,22 @@
+theme
+highlight
+256
+2556
+255
+syntax
+preview
+wish
+wish not found
+wish not
+win
+windows
+running
+\qemu
+share
+driver
+samba
+'user'
+user could
 arch
 sda
 dd
@@ -19,7 +38,6 @@ control j
 control h
 H
 boot
-windows
 move
 back_and
 container
