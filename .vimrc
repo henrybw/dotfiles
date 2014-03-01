@@ -152,7 +152,7 @@ set printoptions=syntax:y,wrap:y
 " Switch on syntax highlighting.
 syntax on
 
-set number
+set nonumber
 "set backupskip=/tmp/*,/private/tmp/*"
 
 if !has("gui_running")
@@ -183,3 +183,14 @@ inoremap JK <ESC>
 inoremap kj <ESC>
 inoremap KJ <ESC>
 
+set completeopt=menu,menuone,longest
+set pumheight=15
+
+" SuperTab option for context aware completion
+let g:SuperTabDefaultCompletionType = "context"
+
+" Disable auto popup, use <Tab> to autocomplete
+let g:clang_complete_auto = 0
+
+" Show clang errors in the quickfix window
+let g:clang_complete_copen = 1
