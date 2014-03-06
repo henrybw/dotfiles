@@ -22,7 +22,7 @@ endif
 
 if has("gui_running")
     " set the font to use
-    set guifont=Consolas
+    set guifont=Consolas\ 12
     " Hide the mouse pointer while typing
     set mousehide
 endif
@@ -194,3 +194,5 @@ let g:clang_complete_auto = 0
 
 " Show clang errors in the quickfix window
 let g:clang_complete_copen = 1
+
+set clipboard=unnamedplus
