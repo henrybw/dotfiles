@@ -196,3 +196,6 @@ let g:clang_complete_auto = 0
 let g:clang_complete_copen = 1
 
 set clipboard=unnamedplus
+set hidden
+set confirm
+set t_ut=
