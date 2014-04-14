@@ -152,7 +152,7 @@ set printoptions=syntax:y,wrap:y
 " Switch on syntax highlighting.
 syntax on
 
-set nonumber
+set number
 "set backupskip=/tmp/*,/private/tmp/*"
 
 if !has("gui_running")
@@ -196,3 +196,6 @@ let g:clang_complete_auto = 0
 let g:clang_complete_copen = 1
 
 set clipboard=unnamedplus
+set hidden
+set confirm
+set t_ut=
