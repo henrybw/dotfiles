@@ -152,7 +152,7 @@ set printoptions=syntax:y,wrap:y
 " Switch on syntax highlighting.
 syntax on
 
-set nonumber
+set number
 "set backupskip=/tmp/*,/private/tmp/*"
 
 if !has("gui_running")
