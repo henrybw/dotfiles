@@ -1,9 +1,0 @@
-#!/bin/sh
-
-meminfo=`free -mt | grep buffers/cache | egrep -o "[0-9]+"`;
-usedmem=($meminfo);
-totalexpr=`echo $meminfo | tr ' ' '+'`;
-totalmem=`perl -e "print $totalexpr";`
-
-perl -e "printf \"Mem: %d/%d MB (%.2f%%)\", $usedmem, $totalmem, 100.0 * $usedmem / $totalmem";
-
