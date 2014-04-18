@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Make gvim have most of the screen
+i3-msg split h
+i3-msg exec gvim && sleep 0.2
+i3-msg resize grow left 27 px or 27 ppt && sleep 0.1
+gvim --remote-send ":vs<CR>"
+
+# Stack a terminal above gvim
+i3-msg split h
+i3-msg "exec urxvt -cd `pwd`" && sleep 0.1
+i3-msg layout stacked
+i3-msg focus up
+i3-msg move down  # Move gvim below the terminal
+
+# Run ranger in the original terminal
+branger
+

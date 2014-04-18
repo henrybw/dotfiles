@@ -1,0 +1,3 @@
+#!/bin/bash
+export EDITOR=gvim1  # 
+ranger --cmd="set column_ratios false" --cmd="set preview_files false" --cmd="set hidden_filter .o$|.swp$|.git*$"

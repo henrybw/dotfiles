@@ -1,0 +1,5 @@
+sudo mkdir -p /mnt/windows
+sudo mkdir -p /mnt/ohnoes
+sudo mount /dev/sda3 /mnt/windows
+sudo mount /dev/sdb1 /mnt/ohnoes
+

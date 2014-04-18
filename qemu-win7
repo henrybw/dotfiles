@@ -1,0 +1,8 @@
+#!/bin/sh
+cd /mnt/ohnoes/vm
+
+#qemu-system-x86_64 -vga qxl -spice port=5930,disable-ticketing -m 4096 -enable-kvm winhd.qcow2 -smb /mnt/ohnoes/vm/share &
+#spicec -h 127.0.0.1 -p 5930 --hotkeys release-cursor=ctrl+alt+del
+
+qemu-system-x86_64 -vga std -m 4096 -enable-kvm winhd.qcow2 -smb /mnt/ohnoes/vm/share
+
