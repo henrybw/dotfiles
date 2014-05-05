@@ -22,7 +22,8 @@ endif
 
 if has("gui_running")
     " set the font to use
-    set guifont=Consolas\ 12
+    set guifont=Consolas\ 11
+    set linespace=2
     " Hide the mouse pointer while typing
     set mousehide
 endif
@@ -152,7 +153,7 @@ set printoptions=syntax:y,wrap:y
 " Switch on syntax highlighting.
 syntax on
 
-set number
+set nonumber
 "set backupskip=/tmp/*,/private/tmp/*"
 
 if !has("gui_running")
@@ -172,16 +173,10 @@ imap <S-Tab> <Esc><<i
 nnoremap <CR> :noh<CR><CR>
 set nobackup
 set nowritebackup
-set nowrap
+set wrap
 set linebreak
 set ignorecase
 set smartcase
-
-"set timeoutlen=100
-inoremap jk <ESC>
-inoremap JK <ESC>
-inoremap kj <ESC>
-inoremap KJ <ESC>
 
 set completeopt=menu,menuone,longest
 set pumheight=15
@@ -199,3 +194,20 @@ set clipboard=unnamedplus
 set hidden
 set confirm
 set t_ut=
+
+inoremap <C-c> <Esc>
+
+" Fix PGUP/PGDN.
+map <silent> <PageUp> 1000<C-U>
+map <silent> <PageDown> 1000<C-D>
+imap <silent> <PageUp> <C-O>1000<C-U>
+imap <silent> <PageDown> <C-O>1000<C-D>
+set nostartofline
+
+" Enable mouse.
+set mouse=a
+
+set laststatus=2
+let g:airline_theme = 'powerlineish'
+"let g:airline_powerline_fonts = 1
+
