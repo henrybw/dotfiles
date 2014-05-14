@@ -8,7 +8,7 @@ set undolevels=100
 set nocompatible
 set autoindent
 set smarttab" Allow backspace to back over lines
-set backspace=2
+set backspace=indent,eol,start
 set exrc
 set shiftwidth=4
 set tabstop=4
