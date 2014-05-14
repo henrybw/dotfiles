@@ -153,10 +153,10 @@ set printoptions=syntax:y,wrap:y
 " Switch on syntax highlighting.
 syntax on
 
-set nonumber
+set number
 "set backupskip=/tmp/*,/private/tmp/*"
 
-if !has("gui_running")
+if (&term == "xterm" || &term == "xterm-256color")
     set term=xterm
     set t_Co=256
     let &t_AB="\e[48;5;%dm"
@@ -178,17 +178,8 @@ set linebreak
 set ignorecase
 set smartcase
 
-set completeopt=menu,menuone,longest
-set pumheight=15
-
-" SuperTab option for context aware completion
-let g:SuperTabDefaultCompletionType = "context"
-
-" Disable auto popup, use <Tab> to autocomplete
-let g:clang_complete_auto = 0
-
-" Show clang errors in the quickfix window
-let g:clang_complete_copen = 1
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
 
 set clipboard=unnamedplus
 set hidden
