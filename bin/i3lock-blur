@@ -19,6 +19,6 @@ file2=$(mktemp --tmpdir i3lock-wrapper-XXXXXXXXXX.png)
 
 scrot -d0 "$file1"
 convert "$file1" -blur 0x3 "$file2"
-i3lock -i "$file2"
+i3lock -p win -i "$file2"
 cp $file2 ~/test.png
 rm "$file1" "$file2"
