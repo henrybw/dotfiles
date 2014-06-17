@@ -73,10 +73,15 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 #-------------------------------------------------------------------------------
 
 bindkey -v
+bindkey '\e[3~' delete-char
+bindkey '^R' history-incremental-search-backward
 
 export EDITOR='vim'
 export VISUAL='vim'
 export GIT_EDITOR='vim'
+alias info="info --vi-keys"
+alias tmux="tmux -2"
+
 
 setopt appendhistory autocd extendedglob notify completeinword
 
@@ -89,4 +94,17 @@ select-word-style shell
 alias alert='echo -e "\a"';
 
 eval $(ssh-agent) > /dev/null;
+
+
+#
+## Aliases.
+#
+
+alias ll='ls -lh --group-directories-first'
+alias lla='ls -lah --group-directories-first'
+
+stty stop undef
+stty start undef
+
+eval $(dircolors $HOME/.dircolors)
 
