@@ -1,161 +1,32 @@
+" Pathogen must be initialized immediately in order to work properly
 filetype off
-call pathogen#infect()
-call pathogen#helptags()
+execute pathogen#infect()
+execute pathogen#helptags()
+
+" Pathogen only re-enables filetype detection; it won't re-enable plugin/indent
 filetype plugin indent on
 
-" Smart tabbing / autoindenting
-set undolevels=100
-set nocompatible
-set autoindent
-set smarttab" Allow backspace to back over lines
-set backspace=indent,eol,start
-set exrc
-set shiftwidth=4
-set tabstop=4
-set cino=t0
-" I like it writing automatically on swapping
-set autowrite
-set showcmd
-if exists('&selection')
-  set selection=exclusive
-endif
+"
+" Theming
+"
 
-if has("gui_running")
-    " set the font to use
-    set guifont=Consolas\ 11
-    set linespace=2
-    " Hide the mouse pointer while typing
-    set mousehide
-endif
-
-
-"Special error formats that handles borland make, greps
-"Error formats :
-"   line = line number
-"   file = file name
-"   etype = error type ( a single character )
-"   enumber = error number
-"   column = column number
-"   message = error message 
-"   _ = space
-
-"   file(line)_:_etype [^0-9] enumber:_message
-"   [^"] "file" [^0-9] line:_message
-"   file(line)_:_message
-"   [^ ]_file_line:_message
-"   file:line:message
-"   etype [^ ]_file_line:_message
-"   etype [^:]:__file(line,column):message    = Borland ??
-"   file:line:message
-"   etype[^_]file_line_column:_message
-set efm=%*[^\ ]\ %t%n\ %f\ %l:\ %m,%\\s%#%f(%l)\ :\ %t%*[^0-9]%n:\ %m,%*[^\"]\"%f\"%*[^0-9]%l:\ %m,%\\s%#%f(%l)\ :\ %m,%*[^\ ]\ %f\ %l:\ %m,%f:%l:%m,%t%*[^\ ]\ %f\ %l:\ %m,%t%*[^:]:\ \ %f(%l\\,%c):%m,%f:%l:%m,%t%*[^\ ]\ %f\ %l\ %c:\ %m 
-" This changes the status bar highlight slightly from the default
-" " set highlight=8b,db,es,mb,Mn,nu,rs,ss,tb,vr,ws
-
-"I like things quiet
-set visualbell
-" Give some room for errors
-set cmdheight=2
-" always show a status line
-au VimEnter * set laststatus=2
-set ruler
-" Use a viminfo file
-set viminfo='20,\"50
-"set path=.,d:\wave,d:\wave\include,d:\wave\fdt
-"set backup              " keep a backup file
-"set backupext=.bak
-" Like having history
-set history=100
-
-" Map Y do be analog of D
-map Y y$
-" Toggle paste 
-map zp :set paste! paste?<CR>
-
-" From the vimrc of 'Peppe'
-
-  " So I can get to ,
-  noremap g, ,
-  " Go to old line + column
-  noremap gf gf`"
-  noremap <C-^> <C-^>`"
-
-
-" Switch off search pattern highlighting.
-set nohlsearch
-"Toggle search pattern hilighting and display the value
-if v:version >=600
-  map <f7> :nohlsearch<CR>
-else
-  map <f7> :set hlsearch! hlsearch?<CR>
-endif
-imap <f7> <C-O><f7> 
-
-"Ctags mapping for <alt n> and <alt p>
-map <M-n> :cn<cr>z.:cc<CR>
-map <M-p> :cp<cr>z.:cc<CR>
-set shellpipe=2>&1\|tee
-"set shellpipe=\|grep\ -v\ NOTE:\|tee
-
-" Set nice colors
-" background for normal text is light grey
-" Text below the last line is darker grey
-" Cursor is green
-" Constants are not underlined but have a slightly lighter background
-"  highlight Normal guibg=grey95
-"highlight Cursor guibg=Red guifg=NONE
-"highlight Visual guifg=Sys_HighlightText guibg=Sys_Highlight gui=NONE
-"  highlight NonText guibg=grey90
-"  highlight Constant gui=NONE guibg=grey95
-"  highlight Special gui=NONE guibg=grey95
-
-if has("gui_running")
-"if &columns < 90 && &lines < 32
-"   win 90 32 
-    "au GUIEnter * win 100 50 
-"  endif
-  " Make external commands work through a pipe instead of a pseudo-tty
-  set noguipty
-endif
-
-" Map control-cr to goto new line without comment leader
-imap <C-CR> <ESC>o
-
-" Look at syntax attribute
-nmap <F4> :echo synIDattr(synID(line("."), col("."), 1), "name")<CR>
-nmap <S-F4> :echo synIDattr(synID(line("."), col("."), 0), "name")<CR>
-" delete the swap file
-nmap \\. :echo strpart("Error  Deleted",7*(0==delete(expand("%:p:h")."/.".expand("%:t").".swp")),7)<cr>
-
-" delete prev word
-imap <C-BS> <c-w>
-
-  set joinspaces 
-
-" Today
-if !exists('usersign') 
-let usersign=$username
-endif
-imap <F2> <C-R>=strftime("%d%b%Y")." ".usersign.":"<CR>
-if has("menu")
-  imenu 35.60 &Insert.&Date<tab>F2      <c-r>=strftime("%d%b%Y")." ".usersign.":"<CR>
-  menu  35.60 &Insert.&Date<tab>F2      "=strftime("%d%b%Y")." ".usersign.":"<CR>p
-  imenu  35.60 &Insert.Date\ and\ &Username     <c-r>=strftime("%d%b%Y")<CR>
-  menu  35.60 &Insert.Date\ and\ &Username      "=strftime("%d%b%Y")<CR>p
-endif
-
-" Enable 'wild menus'
-set wildmenu
-set showfulltag
-set display+=lastline
-set printoptions=syntax:y,wrap:y
-
-" Switch on syntax highlighting.
+colorscheme desert
 syntax on
-
 set number
-"set backupskip=/tmp/*,/private/tmp/*"
 
+set nohlsearch  " Switch off search pattern highlighting
+
+" Enable airline
+set laststatus=2
+let g:airline_theme = 'powerlineish'
+
+" I've gotten this to work on my Linux installation (with the modified fonts),
+" but it never works on any other system unless I install the modified fonts,
+" so I decided the 'cool' symbols weren't worth it.
+"let g:airline_powerline_fonts = 1
+
+" Some special magic to get full 256 colors working in terminals
+set t_ut=
 if (&term == "xterm" || &term == "xterm-256color")
     set term=xterm
     set t_Co=256
@@ -163,42 +34,150 @@ if (&term == "xterm" || &term == "xterm-256color")
     let &t_AF="\e[38;5;%dm"
 endif
 
-"colorscheme vs
-colorscheme desert
+"
+" Keys/Controls
+"
 
-set cindent
-set cinoptions=(0,W4  " indents lines inside parentheses to the column where the starting parenthesis is
-set expandtab  " for spaces instead of tabs
-imap <S-Tab> <Esc><<i
-nnoremap <CR> :noh<CR><CR>
-set nobackup
-set nowritebackup
-set wrap
-set linebreak
-set ignorecase
-set smartcase
-
+" Shortcuts for cycling buffers
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 
-set clipboard=unnamedplus
-set hidden
-set confirm
-set t_ut=
-
+" Allows Ctrl-C to be always used in place of Esc (normally, Visual Mode
+" doesn't allow you to exit with Ctrl-C, for example).
 inoremap <C-c> <Esc>
 
-" Fix PGUP/PGDN.
+" Map Y do be analog of D
+map Y y$
+
+" Toggle paste mode
+map zp :set paste! paste?<CR>
+
+"Toggle search pattern hilighting and display the value
+if v:version >= 600
+  map <f7> :nohlsearch<CR>
+else
+  map <f7> :set hlsearch! hlsearch?<CR>
+endif
+imap <f7> <C-O><f7> 
+
+" Emulate some IDE-style editing behavior with backspace and shift-tab
+set backspace=indent,eol,start
+imap <S-Tab> <Esc><<i
+imap <C-BS> <C-w>
+
+" Fix PgUp/PgDn
 map <silent> <PageUp> 1000<C-U>
 map <silent> <PageDown> 1000<C-D>
 imap <silent> <PageUp> <C-O>1000<C-U>
 imap <silent> <PageDown> <C-O>1000<C-D>
-set nostartofline
 
-" Enable mouse.
+" Enable mouse
 set mouse=a
 
-set laststatus=2
-let g:airline_theme = 'powerlineish'
-"let g:airline_powerline_fonts = 1
+" Map Ctrl-Enter to force insert a newine without a comment leader. This works
+" even if formatoptions has the 'o' option set, since it just clears the line
+" immediately after creating it.
+inoremap <C-CR> <ESC>o<ESC>cc
+
+" Normal-mode equivalents of the above. Logically, it should be Ctrl-O and
+" Ctrl-Shift-O, but Ctrl-O was already taken.
+nnoremap <C-CR> o<ESC>cc
+nnoremap <C-S-CR> O<ESC>cc
+
+"
+" Formatting
+"
+
+" Tab settings: always use 4 spaces for tabs
+set shiftwidth=4
+set tabstop=4
+set expandtab
+set smarttab  " Use shiftwidth for tabs instead of tab stops
+
+" Indentation
+set noautoindent
+set nosmartindent
+set cindent
+
+" Indents lines inside parens to the column where the starting paren is
+set cinoptions+=(0,W4
+
+" Indent statements in cases relative to the case labels (this is confusing;
+" see the vim documentation for the lN setting for an example).
+set cinoptions+=l1
+
+set cinoptions+=jN,JN  " Fixes for Java/JavaScript indentation
+
+" Settings for coding styles that prefer certain constructs be unindented
+set cinoptions+=N-s  " Don't indent namespace blocks
+set cinoptions+=g0  " Don't indent C++ class scope declarations
+set cinoptions+=:0  " Don't indent case labels
+
+" TODO: python autoindent is broken
+
+" Normally we don't want line wrapping, so disable it for everything but plain
+" text and files with no file type (which are probably also plain text).
+set wrap
+autocmd FileType * if !empty(&filetype) && &filetype != "text" | set nowrap
+
+"
+" Paste settings
+"
+
+" Use + register whenever possible
+if has('unnamedplus')
+    set clipboard=unnamedplus
+else
+    set clipboard=unnamed
+endif
+
+"
+" GVim settings
+"
+
+if has("gui_running")
+    " Fonts tend to look smaller than they do in console vim
+    set guifont=Consolas:h12
+    set linespace=2
+
+    set mousehide  " Hide the mouse pointer while typing
+
+    " No scrollbars or toolbars
+    set guioptions-=TmrL
+endif
+
+"
+" Tag settings
+"
+
+" Enable 'wild menus'
+set wildmenu
+set showfulltag
+
+"
+" Miscellaneous settings
+"
+
+set nocompatible
+set history=100
+
+" Don't keep around the backup file on success
+set writebackup
+set nobackup
+
+set linebreak
+set nostartofline
+set display+=lastline
+
+" Ignore case in searches for all-lowercase searches, but respect case if
+" there is an uppercase character.
+set ignorecase
+set smartcase
+
+" Settings for modified buffers
+set hidden  " Keep around modified buffers without having to save them
+set confirm  " Ask instead of autofailing when doing a destructive action
+
+set visualbell  " No sounds please
+set printoptions=syntax:y,wrap:y
 
