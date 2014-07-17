@@ -5,5 +5,5 @@ usedmem=($meminfo);
 totalexpr=`echo $meminfo | tr ' ' '+'`;
 totalmem=`perl -e "print $totalexpr";`
 
-perl -e "printf \"Mem: %d/%d MB (%.2f%%)\", $usedmem, $totalmem, 100.0 * $usedmem / $totalmem";
+perl -e "printf \" Mem: %d/%d MB (%.2f%%)\", $usedmem, $totalmem, 100.0 * $usedmem / $totalmem";
 
