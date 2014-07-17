@@ -137,7 +137,7 @@ endif
 
 if has("gui_running")
     " Fonts tend to look smaller than they do in console vim
-    set guifont=Consolas:h12
+    set guifont=Consolas\ 11
     set linespace=2
 
     set mousehide  " Hide the mouse pointer while typing
