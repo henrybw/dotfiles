@@ -13,6 +13,7 @@ filetype plugin indent on
 colorscheme desert
 syntax on
 set number
+set cmdheight=1
 
 set nohlsearch  " Switch off search pattern highlighting
 
@@ -23,7 +24,7 @@ let g:airline_theme = 'powerlineish'
 " I've gotten this to work on my Linux installation (with the modified fonts),
 " but it never works on any other system unless I install the modified fonts,
 " so I decided the 'cool' symbols weren't worth it.
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 " Some special magic to get full 256 colors working in terminals
 set t_ut=
@@ -143,7 +144,10 @@ if has("gui_running")
     set mousehide  " Hide the mouse pointer while typing
 
     " No scrollbars or toolbars
-    set guioptions-=TmrL
+    set guioptions-=T
+    set guioptions-=m
+    set guioptions-=r
+    set guioptions-=L
 endif
 
 "
