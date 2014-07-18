@@ -40,8 +40,8 @@ endif
 "
 
 " Shortcuts for cycling buffers
-nnoremap <C-Tab> :bn<CR>
-nnoremap <C-S-Tab> :bp<CR>
+nnoremap <S-L> :bn<CR>
+nnoremap <S-H> :bp<CR>
 
 " Allows Ctrl-C to be always used in place of Esc (normally, Visual Mode
 " doesn't allow you to exit with Ctrl-C, for example).
