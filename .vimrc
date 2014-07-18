@@ -40,16 +40,15 @@ endif
 "
 
 " Shortcuts for cycling buffers
-nnoremap <C-n> :bn<CR>
-nnoremap <C-p> :bp<CR>
+nnoremap <C-Tab> :bn<CR>
+nnoremap <C-S-Tab> :bp<CR>
 
 " Allows Ctrl-C to be always used in place of Esc (normally, Visual Mode
 " doesn't allow you to exit with Ctrl-C, for example).
 inoremap <C-c> <Esc>
 
-" Since we use Ctrl-P for cycling buffers, use Ctrl-T for invoking the
-" CtrlP plugin instead
-let g:ctrlp_map = '<c-t>'
+" For the CtrlP plugin
+let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Map Y do be analog of D
