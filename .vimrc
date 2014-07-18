@@ -47,6 +47,11 @@ nnoremap <C-p> :bp<CR>
 " doesn't allow you to exit with Ctrl-C, for example).
 inoremap <C-c> <Esc>
 
+" Since we use Ctrl-P for cycling buffers, use Ctrl-T for invoking the
+" CtrlP plugin instead
+let g:ctrlp_map = '<c-t>'
+let g:ctrlp_cmd = 'CtrlP'
+
 " Map Y do be analog of D
 map Y y$
 
