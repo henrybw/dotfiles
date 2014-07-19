@@ -14,7 +14,10 @@ colorscheme desert
 syntax on
 set number
 set cmdheight=1
+
+" I want splits to open up the way I read: left-to-right, top-to-bottom
 set splitright
+set splitbelow
 
 set nohlsearch  " No search pattern highlighting by default
 
@@ -40,9 +43,13 @@ endif
 " Keys/Controls
 "
 
+" Easier to reach than '\' and ',' (I don't know why everyone uses ',' as
+" their leader key...)
+let mapleader=" "
+
 " Shortcuts for cycling buffers
-nnoremap <S-L> :bn<CR>
-nnoremap <S-H> :bp<CR>
+nnoremap <leader>h :bn<CR>
+nnoremap <leader>l :bp<CR>
 
 " Allows Ctrl-C to be always used in place of Esc (normally, Visual Mode
 " doesn't allow you to exit with Ctrl-C, for example).
@@ -52,18 +59,32 @@ inoremap <C-c> <Esc>
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-" Open tag in a vertical split
+" Open tag in a vertical split (I wanted Ctrl-Dash and Ctrl-Backslash, i.e.
+" '|' for vertical and '-' for horizontal, but alas there are only a limited
+" number of ASCII-defined control codes...)
 map <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
+map <C-_> :sp<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Map Y do be analog of D
 map Y y$
 
+" Versions of cc and o that don't exit normal mode
+map <leader>cc cc<ESC>
+map <leader>o o<ESC>
+
+" Toggle autocomment mode (normally I don't like it, but it's really helpful
+" when writing multiline C block comments, for example)
+imap <C-s> <ESC>:set formatoptions+=ro<CR>a
+imap <C-d> <ESC>:set formatoptions-=ro<CR>a
+map <leader>s <ESC>:set formatoptions+=ro formatoptions?<CR>
+map <leader>d <ESC>:set formatoptions-=ro formatoptions?<CR>
+
 " Toggle paste mode
-map zp :set paste! paste?<CR>
+map zp :set invpaste paste?<CR>
 
 " Toggle search pattern hilighting and display the value
-nmap <f7> :set hlsearch! hlsearch?<CR>
-imap <f7> <ESC>:set hlsearch! hlsearch?<CR>a
+nmap <leader>n :set hlsearch! hlsearch?<CR>
+imap <leader>n <ESC>:set hlsearch! hlsearch?<CR>a
 
 " Emulate some IDE-style editing behavior with backspace and shift-tab
 set backspace=indent,eol,start
@@ -80,12 +101,13 @@ imap <silent> <PageDown> <C-O>1000<C-D>
 set mouse=a
 
 " Often I hold shift too long when issuing these commands
-" (stolen from http://www2.mathematik.hu-berlin.de/~altmeyrx/BZQ/vimrc)
+" (adapted from http://www2.mathematik.hu-berlin.de/~altmeyrx/BZQ/vimrc)
 command! Q q
 command! Qall qall
 command! W w
 command! Wall wall
 command! WQ wq
+command! E e
 
 " Never use Ex mode -- I never *mean* to press it
 nnoremap Q <ESC>
