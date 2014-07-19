@@ -14,6 +14,7 @@ colorscheme desert
 syntax on
 set number
 set cmdheight=1
+set splitright
 
 set nohlsearch  " No search pattern highlighting by default
 
@@ -50,6 +51,9 @@ inoremap <C-c> <Esc>
 " For the CtrlP plugin
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Open tag in a vertical split
+map <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))
 
 " Map Y do be analog of D
 map Y y$
@@ -124,6 +128,10 @@ set cinoptions+=:0  " Don't indent case labels
 set wrap
 autocmd FileType * if !empty(&filetype) && &filetype != "text" | set nowrap
 
+set linebreak
+set nostartofline
+set display+=lastline
+
 "
 " Paste settings
 "
@@ -154,14 +162,6 @@ if has("gui_running")
 endif
 
 "
-" Tag settings
-"
-
-" Enable 'wild menus'
-set wildmenu
-set showfulltag
-
-"
 " Miscellaneous settings
 "
 
@@ -172,9 +172,9 @@ set history=100
 set writebackup
 set nobackup
 
-set linebreak
-set nostartofline
-set display+=lastline
+" Enable 'wild menus' for tags
+set wildmenu
+set showfulltag
 
 " Ignore case in searches for all-lowercase searches, but respect case if
 " there is an uppercase character.
