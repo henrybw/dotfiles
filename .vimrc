@@ -53,7 +53,7 @@ let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Open tag in a vertical split
-map <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))
+map <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Map Y do be analog of D
 map Y y$
