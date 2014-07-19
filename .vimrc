@@ -15,7 +15,7 @@ syntax on
 set number
 set cmdheight=1
 
-set nohlsearch  " Switch off search pattern highlighting
+set nohlsearch  " No search pattern highlighting by default
 
 " Enable airline
 set laststatus=2
@@ -57,13 +57,9 @@ map Y y$
 " Toggle paste mode
 map zp :set paste! paste?<CR>
 
-"Toggle search pattern hilighting and display the value
-if v:version >= 600
-  map <f7> :nohlsearch<CR>
-else
-  map <f7> :set hlsearch! hlsearch?<CR>
-endif
-imap <f7> <C-O><f7> 
+" Toggle search pattern hilighting and display the value
+nmap <f7> :set hlsearch! hlsearch?<CR>
+imap <f7> <ESC>:set hlsearch! hlsearch?<CR>a
 
 " Emulate some IDE-style editing behavior with backspace and shift-tab
 set backspace=indent,eol,start
@@ -79,19 +75,24 @@ imap <silent> <PageDown> <C-O>1000<C-D>
 " Enable mouse
 set mouse=a
 
-" Map Ctrl-Enter to force insert a newine without a comment leader. This works
-" even if formatoptions has the 'o' option set, since it just clears the line
-" immediately after creating it.
-inoremap <C-CR> <ESC>o<ESC>cc
+" Often I hold shift too long when issuing these commands
+" (stolen from http://www2.mathematik.hu-berlin.de/~altmeyrx/BZQ/vimrc)
+command! Q q
+command! Qall qall
+command! W w
+command! Wall wall
+command! WQ wq
 
-" Normal-mode equivalents of the above. Logically, it should be Ctrl-O and
-" Ctrl-Shift-O, but Ctrl-O was already taken.
-nnoremap <C-CR> o<ESC>cc
-nnoremap <C-S-CR> O<ESC>cc
+" Never use Ex mode -- I never *mean* to press it
+nnoremap Q <ESC>
 
 "
 " Formatting
 "
+
+" The C file plugin resets whatever formatoptions we specify here, so we need
+" to set this to trigger on buffer load events instead.
+autocmd BufNewFile,BufRead * setlocal formatoptions=cqlj
 
 " Tab settings: always use 4 spaces for tabs
 set shiftwidth=4
@@ -117,8 +118,6 @@ set cinoptions+=jN,JN  " Fixes for Java/JavaScript indentation
 set cinoptions+=N-s  " Don't indent namespace blocks
 set cinoptions+=g0  " Don't indent C++ class scope declarations
 set cinoptions+=:0  " Don't indent case labels
-
-" TODO: python autoindent is broken
 
 " Normally we don't want line wrapping, so disable it for everything but plain
 " text and files with no file type (which are probably also plain text).
