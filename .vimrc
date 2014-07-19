@@ -43,13 +43,12 @@ endif
 " Keys/Controls
 "
 
-" Easier to reach than '\' and ',' (I don't know why everyone uses ',' as
-" their leader key...)
-let mapleader=" "
+" Easier to reach than '\'
+let mapleader=","
 
 " Shortcuts for cycling buffers
-nnoremap <leader>h :bn<CR>
-nnoremap <leader>l :bp<CR>
+nnoremap <leader>. :bn<CR>
+nnoremap <leader>m :bp<CR>
 
 " Allows Ctrl-C to be always used in place of Esc (normally, Visual Mode
 " doesn't allow you to exit with Ctrl-C, for example).
@@ -65,26 +64,28 @@ let g:ctrlp_cmd = 'CtrlP'
 map <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-_> :sp<CR>:exec("tag ".expand("<cword>"))<CR>
 
+" Vertical split version of Ctrl-W F (because I never use vim tabs anyway)
+map <C-w>gf :vertical wincmd f<CR>
+
 " Map Y do be analog of D
 map Y y$
 
 " Versions of cc and o that don't exit normal mode
-map <leader>cc cc<ESC>
-map <leader>o o<ESC>
+nmap <leader>cc cc<ESC>
+nmap <CR> o<ESC>
 
 " Toggle autocomment mode (normally I don't like it, but it's really helpful
 " when writing multiline C block comments, for example)
 imap <C-s> <ESC>:set formatoptions+=ro<CR>a
 imap <C-d> <ESC>:set formatoptions-=ro<CR>a
-map <leader>s <ESC>:set formatoptions+=ro formatoptions?<CR>
-map <leader>d <ESC>:set formatoptions-=ro formatoptions?<CR>
+nmap <leader>s <ESC>:set formatoptions+=ro formatoptions?<CR>
+nmap <leader>d <ESC>:set formatoptions-=ro formatoptions?<CR>
 
 " Toggle paste mode
 map zp :set invpaste paste?<CR>
 
 " Toggle search pattern hilighting and display the value
-nmap <leader>n :set hlsearch! hlsearch?<CR>
-imap <leader>n <ESC>:set hlsearch! hlsearch?<CR>a
+map <leader>n :set hlsearch! hlsearch?<CR>
 
 " Emulate some IDE-style editing behavior with backspace and shift-tab
 set backspace=indent,eol,start
@@ -108,6 +109,7 @@ command! W w
 command! Wall wall
 command! WQ wq
 command! E e
+command! Bd bd
 
 " Never use Ex mode -- I never *mean* to press it
 nnoremap Q <ESC>
@@ -120,9 +122,11 @@ nnoremap Q <ESC>
 " to set this to trigger on buffer load events instead.
 autocmd BufNewFile,BufRead * setlocal formatoptions=cqlj
 
-" Tab settings: always use 4 spaces for tabs
+" Tab settings
 set shiftwidth=4
 set tabstop=4
+"set shiftwidth=2
+"set tabstop=2
 set expandtab
 set smarttab  " Use shiftwidth for tabs instead of tab stops
 
@@ -143,6 +147,7 @@ set cinoptions+=jN,JN  " Fixes for Java/JavaScript indentation
 " Settings for coding styles that prefer certain constructs be unindented
 set cinoptions+=N-s  " Don't indent namespace blocks
 set cinoptions+=g0  " Don't indent C++ class scope declarations
+"set cinoptions+=g1  " Google-style 1 space indent for C++ class scope
 set cinoptions+=:0  " Don't indent case labels
 
 " Normally we don't want line wrapping, so disable it for everything but plain
