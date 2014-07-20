@@ -58,11 +58,8 @@ inoremap <C-c> <Esc>
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-" Open tag in a vertical split (I wanted Ctrl-Dash and Ctrl-Backslash, i.e.
-" '|' for vertical and '-' for horizontal, but alas there are only a limited
-" number of ASCII-defined control codes...)
-map <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
-map <C-_> :sp<CR>:exec("tag ".expand("<cword>"))<CR>
+" Open tag in a vertical split (Ctrl-W ] opens in horizontal split)
+map <C-w>\ :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Vertical split version of Ctrl-W F (because I never use vim tabs anyway)
 map <C-w>gf :vertical wincmd f<CR>
@@ -136,7 +133,7 @@ set nosmartindent
 set cindent
 
 " Indents lines inside parens to the column where the starting paren is
-set cinoptions+=(0,W4
+set cinoptions=(0,w1,W4
 
 " Indent statements in cases relative to the case labels (this is confusing;
 " see the vim documentation for the lN setting for an example).
@@ -149,6 +146,8 @@ set cinoptions+=N-s  " Don't indent namespace blocks
 set cinoptions+=g0  " Don't indent C++ class scope declarations
 "set cinoptions+=g1  " Google-style 1 space indent for C++ class scope
 set cinoptions+=:0  " Don't indent case labels
+set cinoptions+=t0  " Don't indent function return type declaration
+set cinoptions+=i4  " Always indent C++ initializers/base classes by 4 spaces
 
 " Normally we don't want line wrapping, so disable it for everything but plain
 " text and files with no file type (which are probably also plain text).
