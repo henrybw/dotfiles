@@ -69,7 +69,8 @@ map Y y$
 
 " Versions of cc and o that don't exit normal mode
 nmap <leader>cc cc<ESC>
-nmap <CR> o<ESC>
+nmap <leader>o o<ESC>
+nmap <leader>O O<ESC>
 
 " Toggle autocomment mode (normally I don't like it, but it's really helpful
 " when writing multiline C block comments, for example)
