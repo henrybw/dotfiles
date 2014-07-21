@@ -50,6 +50,9 @@ endif
 nnoremap <leader>[ :bp<CR>
 nnoremap <leader>] :bn<CR>
 
+" Cycle between last used buffers
+nnoremap <leader>` :b#<CR>
+
 " Allows Ctrl-C to be always used in place of Esc (normally, Visual Mode
 " doesn't allow you to exit with Ctrl-C, for example).
 inoremap <C-c> <Esc>
