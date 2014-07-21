@@ -46,12 +46,9 @@ endif
 " Keys/Controls
 "
 
-" Easier to reach than '\'
-let mapleader=","
-
 " Shortcuts for cycling buffers
-nnoremap <leader>. :bn<CR>
-nnoremap <leader>m :bp<CR>
+nnoremap <leader>[ :bp<CR>
+nnoremap <leader>] :bn<CR>
 
 " Allows Ctrl-C to be always used in place of Esc (normally, Visual Mode
 " doesn't allow you to exit with Ctrl-C, for example).
@@ -122,6 +119,8 @@ nnoremap Q <ESC>
 " The C file plugin resets whatever formatoptions we specify here, so we need
 " to set this to trigger on buffer load events instead.
 autocmd BufNewFile,BufRead * setlocal formatoptions=cqlj
+
+set textwidth=80
 
 " Tab settings
 set shiftwidth=4
