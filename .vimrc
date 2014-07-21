@@ -6,6 +6,9 @@ execute pathogen#helptags()
 " Pathogen only re-enables filetype detection; it won't re-enable plugin/indent
 filetype plugin indent on
 
+" Enable cscope support
+source $HOME/.vim/bundle/cscope/cscope_maps.vim
+
 "
 " Theming
 "
