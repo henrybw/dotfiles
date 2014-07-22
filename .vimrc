@@ -151,7 +151,7 @@ set cinoptions+=jN,JN  " Fixes for Java/JavaScript indentation
 set cinoptions+=N-s  " Don't indent namespace blocks
 set cinoptions+=g0  " Don't indent C++ class scope declarations
 "set cinoptions+=g1  " Google-style 1 space indent for C++ class scope
-set cinoptions+=:0  " Don't indent case labels
+set cinoptions+=:s  " Indent case labels
 set cinoptions+=t0  " Don't indent function return type declaration
 set cinoptions+=i4  " Always indent C++ initializers/base classes by 4 spaces
 
