@@ -6,8 +6,10 @@ execute pathogen#helptags()
 " Pathogen only re-enables filetype detection; it won't re-enable plugin/indent
 filetype plugin indent on
 
-" Enable cscope support
+" Enable plugins
 source $HOME/.vim/bundle/cscope/cscope_maps.vim
+source $HOME/.vim/bundle/closetag/closetag.vim
+source $HOME/.vim/bundle/matchit/plugin/matchit.vim
 
 "
 " Theming
@@ -181,8 +183,8 @@ endif
 
 if has("gui_running")
     " Fonts tend to look smaller than they do in console vim
-    set guifont=Consolas\ 11
-    set linespace=2
+    set guifont=Terminus\ 10
+    set linespace=1
 
     set mousehide  " Hide the mouse pointer while typing
 
