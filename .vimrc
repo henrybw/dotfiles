@@ -1,3 +1,7 @@
+"
+" Plugin config
+"
+
 " Pathogen must be initialized immediately in order to work properly
 filetype off
 execute pathogen#infect()
