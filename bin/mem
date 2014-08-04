@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 meminfo=`free -mt | grep buffers/cache | egrep -o "[0-9]+"`;
-usedmem=($meminfo);
+usedmem=($meminfo)
 totalexpr=`echo $meminfo | tr ' ' '+'`;
 totalmem=`perl -e "print $totalexpr";`
 
