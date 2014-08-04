@@ -9,7 +9,7 @@ URxvt.scrollBar: false
 !URxvt*font: xft:Consolas:pixelsize=14:antialias=true:hinting=false,xft:Inconsolata for Powerline,xft:Terminus:size=9:antialias=true:hinting=true
 !URxvt*boldFont: xft:Consolas:bold:pixelsize=14:antialias=true:hinting=false,xft:Inconsolata for Powerline:bold,xft:Terminus:bold:size=9:antialias=true:hinting=true
 URxvt*font: xft:Terminus:pixelsize=14:antialias=false:hinting=false,xft:Inconsolata for Powerline
-URxvt*boldFont: xft:Terminus:bold:pixelsize=14:antialias=false:hinting=false,xft:Inconsolata for Powerline:bold
+URxvt*boldFont: xft:Terminus:pixelsize=14:antialias=false:hinting=false,xft:Inconsolata for Powerline:bold
 
 ! For solarized colors.
 URxvt.intensityStyles: false
