@@ -76,12 +76,12 @@ bindkey -v
 bindkey '\e[3~' delete-char
 bindkey '^R' history-incremental-search-backward
 
+export TERM=xterm-256color
 export EDITOR='vim'
 export VISUAL='vim'
 export GIT_EDITOR='vim'
 alias info="info --vi-keys"
 alias tmux="tmux -2"
-
 
 setopt appendhistory autocd extendedglob notify completeinword
 
