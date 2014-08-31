@@ -10,7 +10,7 @@ execute pathogen#helptags()
 " Pathogen only re-enables filetype detection; it won't re-enable plugin/indent
 filetype plugin indent on
 
-" Enable plugins
+" Enable plugins that need to be manually run
 source $HOME/.vim/bundle/cscope/cscope_maps.vim
 source $HOME/.vim/bundle/closetag/closetag.vim
 source $HOME/.vim/bundle/matchit/plugin/matchit.vim
@@ -66,6 +66,9 @@ inoremap <C-c> <Esc>
 " For the CtrlP plugin
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" For the Tagbar plugin
+nmap <leader>t :TagbarToggle<CR>
 
 " Open tag in a vertical split (Ctrl-W ] opens in horizontal split)
 map <C-w>\ :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
