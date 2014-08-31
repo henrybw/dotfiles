@@ -41,12 +41,7 @@ let g:airline_powerline_fonts = 0
 
 " Some special magic to get full 256 colors working in terminals
 set t_ut=
-if (&term == "xterm" || &term == "xterm-256color")
-    set term=xterm
-    set t_Co=256
-    let &t_AB="\e[48;5;%dm"
-    let &t_AF="\e[38;5;%dm"
-endif
+set t_Co=256
 
 "
 " Keys/Controls
