@@ -90,7 +90,7 @@ nmap <leader>d <ESC>:set formatoptions-=ro formatoptions?<CR>
 map zp :set invpaste paste?<CR>
 
 " Toggle search pattern hilighting and display the value
-map <leader>n :set hlsearch! hlsearch?<CR>
+map <leader>h :set hlsearch! hlsearch?<CR>
 
 " Emulate some IDE-style editing behavior with backspace and shift-tab
 set backspace=indent,eol,start
