@@ -23,6 +23,7 @@ colorscheme desert
 syntax on
 set number
 set cmdheight=1
+set cursorline
 
 " I want splits to open up the way I read: left-to-right, top-to-bottom
 set splitright
@@ -185,7 +186,7 @@ endif
 
 if has("gui_running")
     " Fonts tend to look smaller than they do in console vim
-    set guifont=Terminus\ 10
+    set guifont=Consolas\ 10.5
     set linespace=1
 
     set mousehide  " Hide the mouse pointer while typing
