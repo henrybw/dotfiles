@@ -1,9 +1,11 @@
-#!/bin/bash
+#!/bin/env python2
+import sys
+from subprocess import check_output
 
-meminfo=`free -mt | grep buffers/cache | egrep -o "[0-9]+"`;
-usedmem=($meminfo)
-totalexpr=`echo $meminfo | tr ' ' '+'`;
-totalmem=`perl -e "print $totalexpr";`
+if __name__ == '__main__':
+    mem_info = str(check_output("free -mt | grep Total | egrep -o \"[0-9]+\" | head -n 2", shell=True)).split("\n")
+    total_mem = int(mem_info[0])
+    used_mem = int(mem_info[1])
 
-perl -e "printf \" Mem: %d/%d MB (%.2f%%)\", $usedmem, $totalmem, 100.0 * $usedmem / $totalmem";
+    sys.stdout.write("Mem: %d/%d MB (%.2f%%)" % (used_mem, total_mem, 100.0 * used_mem / total_mem))
 
