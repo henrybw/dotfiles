@@ -68,8 +68,9 @@ bindsym $mod+Ctrl+h workspace prev
 bindsym $mod+Ctrl+l workspace next
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Ctrl+Left workspace prev
-bindsym $mod+Ctrl+Right workspace next
+# (disabled for spotify control)
+#bindsym $mod+Ctrl+Left workspace prev
+#bindsym $mod+Ctrl+Right workspace next
 
 # move workspace between monitors
 bindsym $mod+Ctrl+Shift+h move workspace to output left
@@ -198,9 +199,9 @@ bindsym $mod+F11 exec "amixer set Master 2%-; killall -USR1 i3status;"
 bindsym $mod+F12 exec "amixer set Master 2%+; killall -USR1 i3status;"
 
 # Play controls
-bindsym $mod+F6 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-bindsym $mod+F7 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-bindsym $mod+F8 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+bindsym $mod+Ctrl+Left exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym $mod+Ctrl+Down exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym $mod+Ctrl+Right exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
 # Other settings
 focus_follows_mouse yes
@@ -220,9 +221,9 @@ bar {
 #}
 #bar {
         status_command i3status | ~/bin/i3wrapper.py
-#        position top
-#        font "pango:Tahoma 8"
-#        workspace_buttons no
+#       position top
+#       font "pango:Tahoma 8"
+#       workspace_buttons no
 #       status_command ~/.i3/conky
 #       colors { 
 #               statusline #AAAAAA
@@ -242,7 +243,7 @@ bar {
 #client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
 
 # otherwise Spotify goes berserk for some reason :/
-for_window [class="^Spotify$"] floating enable
+#for_window [class="^Spotify$"] floating enable
 
 # Auto start certain programs in workspaces I want
 #exec --no-startup-id i3-msg 'workspace 3; exec /usr/bin/chromium;'
