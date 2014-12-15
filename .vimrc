@@ -144,7 +144,7 @@ set nosmartindent
 set cindent
 
 " Indents lines inside parens to the column where the starting paren is
-set cinoptions=(0,w1,W4
+set cinoptions=(0,w0,W4
 
 " Indent statements in cases relative to the case labels (this is confusing;
 " see the vim documentation for the lN setting for an example).
