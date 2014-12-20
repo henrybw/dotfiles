@@ -4,19 +4,19 @@ URxvt*locale: true
 URxvt.scrollBar: false
 
 ! Set terminal font.
-!URxvt.font: xft:DejaVuSansMono:size=12
+URxvt*font: xft:DejaVuSansMono:size=10
 !URxvt.font: xft:Consolas:size=13, xft:Inconsolata for Powerline
 !URxvt*font: xft:Consolas:pixelsize=14:antialias=true:hinting=false,xft:Inconsolata for Powerline,xft:Terminus:size=9:antialias=true:hinting=true
 !URxvt*boldFont: xft:Consolas:bold:pixelsize=14:antialias=true:hinting=false,xft:Inconsolata for Powerline:bold,xft:Terminus:bold:size=9:antialias=true:hinting=true
-URxvt*font: xft:Terminus:pixelsize=14:antialias=false:hinting=false,xft:Inconsolata for Powerline
-URxvt*boldFont: xft:Terminus:pixelsize=14:antialias=false:hinting=false,xft:Inconsolata for Powerline:bold
+!URxvt*font: xft:Terminus:pixelsize=14:antialias=false:hinting=false,xft:Inconsolata for Powerline
+!URxvt*boldFont: xft:Terminus:pixelsize=14:antialias=false:hinting=false,xft:Inconsolata for Powerline:bold
 
 ! For solarized colors.
 URxvt.intensityStyles: false
 
 ! Clickable URLs.
 URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/firefox
+!URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
 
 ! Yankable URLs.
@@ -96,7 +96,7 @@ URxvt*color13: S_violet
 URxvt*color14: S_base1
 URxvt*color15: S_base3
 
-!URxvt.letterSpace: -1
+URxvt.letterSpace: -1
 URxvt.keysym.C-equal:   perl:font-size:increase
 URxvt.keysym.C-minus:   perl:font-size:decrease
 URxvt.keysym.C-S-equal: perl:font-size:incglobal
