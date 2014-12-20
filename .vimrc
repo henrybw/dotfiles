@@ -133,8 +133,6 @@ set textwidth=80
 " Tab settings
 set shiftwidth=4
 set tabstop=4
-"set shiftwidth=2
-"set tabstop=2
 set expandtab
 set smarttab  " Use shiftwidth for tabs instead of tab stops
 
