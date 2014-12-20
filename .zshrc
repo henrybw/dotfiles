@@ -78,10 +78,12 @@ bindkey '^R' history-incremental-search-backward
 
 export TERM=xterm-256color
 export EDITOR='vim'
+export BROWSER='/usr/bin/google-chrome-stable'
 export VISUAL='vim'
 export GIT_EDITOR='vim'
 alias info="info --vi-keys"
 alias tmux="tmux -2"
+alias irssi="TERM=screen-256color irssi"
 
 setopt appendhistory autocd extendedglob notify completeinword
 
