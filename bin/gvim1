@@ -1,4 +1,10 @@
 #!/bin/bash
+#
+# gvim1
+#
+# Singleton-mode gvim. This is a substitute for the normal 'gvim' command that
+# redirects everything to a single instance of gvim.
+#
 if [ $# -gt 0 ]; then
     if [ $1 == "--" ]; then
         shift;

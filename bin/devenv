@@ -1,18 +1,24 @@
 #!/bin/sh
+#
+# devenv
+#
+# Script that sets up a specific layout with gvim, a mini ranger browser, and a
+# shell. This is designed around the gvim instance being used as a singleton;
+# the ranger browser is also configured with this setup in mind. You can open
+# files with the singleton gvim instance by using the 'gvim1' script.
+#
 
 # Make gvim have most of the screen
 i3-msg split h
 i3-msg exec gvim && sleep 0.2
 i3-msg resize grow left 27 px or 27 ppt && sleep 0.1
-gvim --remote-send ":vs<CR>"
 
-# Stack a terminal above gvim
-i3-msg split h
-i3-msg "exec urxvt -cd `pwd`" && sleep 0.1
-i3-msg layout stacked
-i3-msg focus up
-i3-msg move down  # Move gvim below the terminal
+# Add a ranger browser above the current shell
+i3-msg focus left
+i3-msg split v
+i3-msg "exec konsole --workdir `pwd` -e 'branger'" && sleep 0.1
+i3-msg move up
 
-# Run ranger in the original terminal
-branger
+# Focus back on the original shell
+i3-msg focus down
 
