@@ -1,8 +1,4 @@
 #!/bin/bash
 
-#if [ "$1" != "noresize" ]; then
-#    i3-msg resize shrink width 15 px or 15 ppt > /dev/null;
-#fi
-
-ssh-add ~/.ssh/id_persistscreen;
+ssh-add $HOME/.ssh/id_persistscreen;
 ssh henryb@persistscreen.com;
