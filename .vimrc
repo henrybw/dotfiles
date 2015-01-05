@@ -15,6 +15,13 @@ source $HOME/.vim/bundle/cscope/cscope_maps.vim
 source $HOME/.vim/bundle/closetag/closetag.vim
 source $HOME/.vim/bundle/matchit/plugin/matchit.vim
 
+" For the CtrlP plugin
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" For the Tagbar plugin
+nmap <leader>t :TagbarToggle<CR>
+
 "
 " Theming
 "
@@ -24,15 +31,14 @@ syntax on
 set number
 set cmdheight=1
 set cursorline
+set nohlsearch
+set laststatus=2
 
 " I want splits to open up the way I read: left-to-right, top-to-bottom
 set splitright
 set splitbelow
 
-set nohlsearch  " No search pattern highlighting by default
-
 " Enable airline
-set laststatus=2
 let g:airline_theme = 'powerlineish'
 
 " I've gotten this to work on my Linux installation (with the modified fonts),
@@ -58,13 +64,6 @@ nnoremap <leader>` :b#<CR>
 " Allows Ctrl-C to be always used in place of Esc (normally, Visual Mode
 " doesn't allow you to exit with Ctrl-C, for example).
 inoremap <C-c> <Esc>
-
-" For the CtrlP plugin
-let g:ctrlp_map = '<C-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-" For the Tagbar plugin
-nmap <leader>t :TagbarToggle<CR>
 
 " Open tag in a vertical split (Ctrl-W ] opens in horizontal split)
 map <C-w>\ :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
