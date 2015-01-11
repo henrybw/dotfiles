@@ -44,7 +44,7 @@ else
     highlight Statement ctermfg=11
     highlight PreProc ctermfg=81
     highlight Type ctermfg=121
-    highlight Function ctermfg=33
+    highlight Function ctermfg=39
     highlight Include ctermfg=166
     highlight Define ctermfg=11
     highlight Operator ctermfg=64
