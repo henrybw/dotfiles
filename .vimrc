@@ -26,7 +26,10 @@ nmap <leader>t :TagbarToggle<CR>
 " Theming
 "
 
-colorscheme desert
+set background=dark
+colorscheme solarized
+let g:solarized_italic=0
+
 syntax on
 set number
 set cmdheight=1
@@ -181,7 +184,6 @@ endif
 "
 
 if has("gui_running")
-    set guifont=Consolas\ 10
     set linespace=1
 
     set mousehide  " Hide the mouse pointer while typing
@@ -219,4 +221,3 @@ set confirm  " Ask instead of autofailing when doing a destructive action
 
 set visualbell  " No sounds please
 set printoptions=syntax:y,wrap:y
-
