@@ -38,7 +38,7 @@ ZSH_THEME="rkj-repos"
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
 # much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment following line if you want to  shown in the command execution time stamp 
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
@@ -85,7 +85,7 @@ alias info="info --vi-keys"
 alias tmux="tmux -2"
 alias irssi="TERM=screen-256color irssi"
 
-setopt appendhistory autocd extendedglob notify completeinword
+setopt autocd extendedglob notify completeinword
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
