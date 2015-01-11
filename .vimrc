@@ -26,9 +26,18 @@ nmap <leader>t :TagbarToggle<CR>
 " Theming
 "
 
-set background=dark
-colorscheme solarized
-let g:solarized_italic=0
+if has("gui_running")
+    set background=dark
+    colorscheme solarized
+    let g:solarized_italic=0
+else
+    " Tweak slate to sort of look like solarized
+    colorscheme slate
+    highlight Function ctermfg=33
+    highlight Include ctermfg=166
+    highlight Operator ctermfg=64
+    highlight Constant ctermfg=37
+endif
 
 syntax on
 set number
