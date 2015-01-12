@@ -54,7 +54,7 @@ else
     highlight link Special String
     highlight Error ctermfg=red ctermbg=0
     highlight clear CursorLine
-    highlight CursorLine term=reverse ctermbg=0
+    highlight CursorLine term=reverse ctermbg=236
 endif
 
 set number
