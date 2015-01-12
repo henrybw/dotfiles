@@ -55,6 +55,8 @@ else
     highlight Error ctermfg=red ctermbg=0
     highlight clear CursorLine
     highlight CursorLine term=reverse ctermbg=236
+    highlight clear Search
+    highlight Search cterm=reverse ctermbg=248
 endif
 
 set number
