@@ -41,7 +41,7 @@ else
     syntax on
     highlight Comment ctermfg=14
     highlight Identifier ctermfg=14
-    highlight Statement ctermfg=11
+    highlight Statement ctermfg=10
     highlight PreProc ctermfg=81
     highlight Type ctermfg=121
     highlight Function ctermfg=39
