@@ -163,7 +163,7 @@ nnoremap Q <ESC>
 
 " The C file plugin resets whatever formatoptions we specify here, so we need
 " to set this to trigger on buffer load events instead.
-autocmd BufNewFile,BufRead * setlocal formatoptions=cqlj
+autocmd BufNewFile,BufRead * setlocal formatoptions=cql
 
 set textwidth=80
 
