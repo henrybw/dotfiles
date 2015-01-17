@@ -76,6 +76,7 @@ bindkey -v
 bindkey '\e[3~' delete-char
 bindkey '^R' history-incremental-search-backward
 
+export KEYTIMEOUT=1
 export TERM=xterm-256color
 export EDITOR='vim'
 export BROWSER='/usr/bin/google-chrome-stable'
