@@ -75,6 +75,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 bindkey -v
 bindkey '\e[3~' delete-char
 bindkey '^R' history-incremental-search-backward
+bindkey '^S' history-incremental-search-forward
 
 export KEYTIMEOUT=1
 export TERM=xterm-256color
