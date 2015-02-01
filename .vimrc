@@ -25,6 +25,10 @@ source $HOME/.vim/bundle/matchit/plugin/matchit.vim
 " For the CtrlP plugin
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg)$',
+  \ 'file': '\v\.(so|swp|o)$',
+  \ }
 
 " For the Tagbar plugin
 nmap <leader>t :TagbarToggle<CR>
@@ -39,42 +43,41 @@ if has("gui_running")
     let g:solarized_italic=0
 
     syntax on
-else
-    colorscheme slate
+colorscheme slate
 
-    " For some reason, the syntax highlighting overwrites the definition for
-    " certain highlight groups, so we specify them after we've turned on
-    " syntax highlighting.
-    syntax on
-    highlight Comment ctermfg=14
-    highlight Identifier ctermfg=14
-    highlight Statement ctermfg=10
-    highlight PreProc ctermfg=81
-    highlight Type ctermfg=121
-    highlight Function ctermfg=39
-    highlight Include ctermfg=166
-    highlight Define ctermfg=11
-    highlight Operator ctermfg=64
-    highlight Structure ctermfg=10
-    highlight Constant ctermfg=37
-    highlight clear Special
-    highlight link Special String
-    highlight Error ctermfg=red ctermbg=0
-    highlight clear CursorLine
-    highlight CursorLine term=reverse ctermbg=236
-    highlight clear Search
-    highlight Search cterm=reverse ctermbg=248
-endif
+" For some reason, the syntax highlighting overwrites the definition for
+" certain highlight groups, so we specify them after we've turned on
+" syntax highlighting.
+syntax on
+highlight Comment ctermfg=14
+highlight Identifier ctermfg=14
+highlight Statement ctermfg=10
+highlight PreProc ctermfg=81
+highlight Type ctermfg=121
+highlight Function ctermfg=39
+highlight Include ctermfg=166
+highlight Operator ctermfg=64
+highlight Structure ctermfg=10
+highlight Constant ctermfg=37
+highlight clear Special
+highlight link Special String
+highlight Error ctermfg=red ctermbg=0
+highlight StatusLine term=reverse ctermfg=36 ctermbg=16 gui=bold
+highlight ColorColumn term=reverse ctermbg=36
+highlight clear CursorLine
+highlight CursorLine term=reverse ctermbg=236
+highlight clear Search
+highlight Search cterm=reverse ctermfg=51
 
 set number
 set cmdheight=1
-set cursorline
 set nohlsearch
 set laststatus=2
 
-" I want splits to open up the way I read: left-to-right, top-to-bottom
-set splitright
-set splitbelow
+" Make cursorline only show up on the currently focused window
+set cursorline
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
 
 " Enable airline
 let g:airline_theme = 'powerlineish'
@@ -119,8 +122,6 @@ nmap <leader>O O<ESC>
 
 " Toggle autocomment mode (normally I don't like it, but it's really helpful
 " when writing multiline C block comments, for example)
-imap <C-s> <ESC>:set formatoptions+=ro<CR>a
-imap <C-d> <ESC>:set formatoptions-=ro<CR>a
 nmap <leader>s <ESC>:set formatoptions+=ro formatoptions?<CR>
 nmap <leader>d <ESC>:set formatoptions-=ro formatoptions?<CR>
 
@@ -141,9 +142,6 @@ map <silent> <PageDown> 1000<C-D>
 imap <silent> <PageUp> <C-O>1000<C-U>
 imap <silent> <PageDown> <C-O>1000<C-D>
 
-" Enable mouse
-set mouse=a
-
 " Often I hold shift too long when issuing these commands
 " (adapted from http://www2.mathematik.hu-berlin.de/~altmeyrx/BZQ/vimrc)
 command! Q q
@@ -157,13 +155,21 @@ command! Bd bd
 " Never use Ex mode -- I never *mean* to press it
 nnoremap Q <ESC>
 
+set mouse=a
+
+" Fix weird 223-char terminal limit to be unlimited
+if has('mouse_sgr')
+    set ttymouse=sgr
+endif
+
 "
 " Formatting
 "
 
 " The C file plugin resets whatever formatoptions we specify here, so we need
 " to set this to trigger on buffer load events instead.
-autocmd BufNewFile,BufRead * setlocal formatoptions=cql
+autocmd BufNewFile,BufRead * setlocal formatoptions=cjql
+au BufRead,BufNewFile *.h set filetype=c
 
 set textwidth=80
 
@@ -188,13 +194,10 @@ set cinoptions+=l1
 set cinoptions+=jN,JN  " Fixes for Java/JavaScript indentation
 
 " Settings for coding styles that prefer certain constructs be unindented
-set cinoptions+=N-s  " Don't indent namespace blocks
-set cinoptions+=g0  " Don't indent C++ class scope declarations
-set cinoptions+=:s  " Indent case labels
+set cinoptions+=:0  " Indent case labels
 set cinoptions+=t0  " Don't indent function return type declaration
-set cinoptions+=i4  " Always indent C++ initializers/base classes by 4 spaces
 
-" Normally we don't want line wrapping, so disable it for everything but plain
+" Normally I don't want line wrapping, so disable it for everything but plain
 " text and files with no file type (which are probably also plain text).
 set wrap
 autocmd FileType * if !empty(&filetype) && &filetype != "text" | set nowrap
@@ -203,6 +206,11 @@ set linebreak
 set nostartofline
 set display+=lastline
 
+" Better wrapping for bulleted lists
+if exists('+breakindent')
+    set breakindent
+    set breakindentopt=shift:2
+endif
 "
 " Paste settings
 "
@@ -236,6 +244,7 @@ endif
 
 set nocompatible
 set history=100
+set printoptions=syntax:y,wrap:y
 
 " Don't keep around the backup file on success
 set writebackup
@@ -250,9 +259,5 @@ set showfulltag
 set ignorecase
 set smartcase
 
-" Settings for modified buffers
 set hidden  " Keep around modified buffers without having to save them
 set confirm  " Ask instead of autofailing when doing a destructive action
-
-set visualbell  " No sounds please
-set printoptions=syntax:y,wrap:y
