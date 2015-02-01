@@ -120,8 +120,6 @@ select-word-style shell
 
 alias alert='echo -e "\a"';
 
-eval $(ssh-agent) > /dev/null;
-
 stty stop undef
 stty start undef
 
