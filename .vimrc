@@ -33,6 +33,9 @@ let g:ctrlp_custom_ignore = {
 " For the Tagbar plugin
 nmap <leader>t :TagbarToggle<CR>
 
+" Load custom mappings for bufkill
+let g:BufKillCreateMappings = 1
+
 "
 " Theming
 "
