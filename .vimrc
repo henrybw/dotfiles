@@ -86,11 +86,14 @@ autocmd WinLeave * setlocal nocursorline
 
 " Enable airline
 let g:airline_theme = 'powerlineish'
+let g:airline_powerline_fonts = 1
 
-" I've gotten this to work on my Linux installation (with the modified fonts),
-" but it never works on any other system unless I install the modified fonts,
-" so I decided the 'cool' symbols weren't worth it.
-let g:airline_powerline_fonts = 0
+" I want splits to open up the way I read: left-to-right, top-to-bottom
+set splitright
+set splitbelow
+
+" Make diff windows open as vertical splits by default
+set diffopt=filler,vertical
 
 " Some special magic to get full 256 colors working in terminals
 set t_ut=
@@ -227,6 +230,7 @@ fun! SetFiletypeConditionalConfig()
     endif
 endfun
 autocmd FileType * call SetFiletypeConditionalConfig()
+
 "
 " Paste settings
 "
