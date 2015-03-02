@@ -89,6 +89,7 @@ alias grep='grep --color=always'
 alias egrep='egrep --color=always'
 alias tmux='tmux -2'
 alias irssi='TERM=screen-256color irssi'
+alias g='git'
 alias cgdb='TERM=screen-256color cgdb'
 alias lag='ag --pager=less'
 
