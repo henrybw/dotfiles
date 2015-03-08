@@ -99,6 +99,8 @@ set diffopt=filler,vertical
 set t_ut=
 set t_Co=256
 
+set lazyredraw
+
 "
 " Keys/Controls
 "
