@@ -112,6 +112,10 @@ hi CursorLine   ctermbg=236   guibg=Grey19
 " Column guide
 hi ColorColumn  ctermbg=36    guibg=DarkCyan
 
+hi StatusLine   term=bold     cterm=bold      gui=bold
+hi StatusLine   ctermfg=16    guifg=Grey0
+hi StatusLine   ctermbg=36    guibg=DarkCyan
+
 hi Search       ctermfg=16    guifg=Grey0
 hi Search       ctermbg=51    guibg=Cyan1
 
