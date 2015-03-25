@@ -20,7 +20,7 @@
 font pango:Tahoma 8
 
 set $mod Mod4
-#set $mod Mod4
+#set $mod Mod1
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier $mod
@@ -199,9 +199,9 @@ bindsym $mod+F10 exec "amixer set Master 1%-; killall -USR1 i3status;"
 bindsym $mod+F11 exec "amixer set Master 1%+; killall -USR1 i3status;"
 
 # Play controls
-bindsym $mod+Ctrl+Left exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-bindsym $mod+Ctrl+Down exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-bindsym $mod+Ctrl+Right exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+bindsym Mod1+Ctrl+Left exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym Mod1+Ctrl+Down exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym Mod1+Ctrl+Right exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
 # Other settings
 focus_follows_mouse yes
