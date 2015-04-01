@@ -30,6 +30,9 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(pyc|so|swp|o)$',
   \ }
 
+" For the Tagbar plugin
+nmap <leader>t :TagbarToggle<CR>
+
 " Load custom mappings for bufkill
 let g:BufKillCreateMappings = 1
 
@@ -198,6 +201,33 @@ fun! SetFiletypeConditionalConfig()
     endif
 endfun
 autocmd FileType * call SetFiletypeConditionalConfig()
+
+"
+" Paste settings
+"
+
+" Use + register whenever possible
+if has('unnamedplus')
+    set clipboard=unnamedplus
+else
+    set clipboard=unnamed
+endif
+
+"
+" GVim settings
+"
+
+if has("gui_running")
+    set linespace=1
+
+    set mousehide  " Hide the mouse pointer while typing
+
+    " No scrollbars or toolbars
+    set guioptions-=T
+    set guioptions-=m
+    set guioptions-=r
+    set guioptions-=L
+endif
 
 "
 " Miscellaneous settings
