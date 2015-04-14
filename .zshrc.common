@@ -1,83 +1,147 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="flazz-hbw"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(vi-mode)
-
-# User configuration
-
-#export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# I used to use oh-my-zsh, but it was way too bloated and made my shell startup
+# times frustratingly slow. So I ripped out all the good bits and threw away the
+# rest of oh-my-zsh.
+#
+
+#
+# Color config
+#
+autoload colors; colors;
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+export LS_COLORS=""
+setopt auto_cd
+setopt multios
+
+#
+# Command history configuration
+#
+if [ -z "$HISTFILE" ]; then
+    HISTFILE=$HOME/.zsh_history
+fi
+HISTSIZE=10000
+SAVEHIST=10000
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups # ignore duplication command history list
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+
+#
+# Keybinding config
+#
+
+# Ensures that $terminfo values are valid and updates editor information when
+# the keymap changes.
+function zle-keymap-select {
+  # The terminal must be in application mode when ZLE is active for $terminfo
+  # values to be valid.
+  if (( ${+terminfo[smkx]} )); then
+    printf '%s' ${terminfo[smkx]}
+  fi
+  if (( ${+terminfo[rmkx]} )); then
+    printf '%s' ${terminfo[rmkx]}
+  fi
+
+  zle reset-prompt
+  zle -R
+}
+
+zle -N zle-keymap-select
+zle -N edit-command-line
+
+bindkey -v                                            # vi mode
+bindkey '\ew' kill-region                             # [Esc-w] - Kill from the cursor to the mark
+bindkey -s '\el' 'ls\n'                               # [Esc-l] - run command: ls
+bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
+if [[ "${terminfo[kpp]}" != "" ]]; then
+  bindkey "${terminfo[kpp]}" up-line-or-history       # [PageUp] - Up a line of history
+fi
+if [[ "${terminfo[knp]}" != "" ]]; then
+  bindkey "${terminfo[knp]}" down-line-or-history     # [PageDown] - Down a line of history
+fi
+
+if [[ "${terminfo[kcuu1]}" != "" ]]; then
+  bindkey "${terminfo[kcuu1]}" up-line-or-search      # start typing + [Up-Arrow] - fuzzy find history forward
+fi
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+  bindkey "${terminfo[kcud1]}" down-line-or-search    # start typing + [Down-Arrow] - fuzzy find history backward
+fi
+
+if [[ "${terminfo[khome]}" != "" ]]; then
+  bindkey "${terminfo[khome]}" beginning-of-line      # [Home] - Go to beginning of line
+fi
+if [[ "${terminfo[kend]}" != "" ]]; then
+  bindkey "${terminfo[kend]}"  end-of-line            # [End] - Go to end of line
+fi
+
+bindkey '^[[1;5C' forward-word                        # [Ctrl-RightArrow] - move forward one word
+bindkey '^[[1;5D' backward-word                       # [Ctrl-LeftArrow] - move backward one word
+
+if [[ "${terminfo[kcbt]}" != "" ]]; then
+  bindkey "${terminfo[kcbt]}" reverse-menu-complete   # [Shift-Tab] - move through the completion menu backwards
+fi
+
+bindkey '^?' backward-delete-char                     # [Backspace] - delete backward
+if [[ "${terminfo[kdch1]}" != "" ]]; then
+  bindkey "${terminfo[kdch1]}" delete-char            # [Delete] - delete forward
+else
+  bindkey "^[[3~" delete-char
+  bindkey "^[3;5~" delete-char
+  bindkey "\e[3~" delete-char
+fi
+
+# Edit the current command line in $EDITOR
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+#
+# Prompt config
+#
+
+setopt promptsubst
+
+# Vi mode indicator
+function vi_mode_prompt_info() {
+    local MODE_INDICATOR="%{$fg_bold[magenta]%}<%{$reset_color%}%{$fg[magenta]%}<<%{$reset_color%}"
+    echo "${${KEYMAP/vicmd/$MODE_INDICATOR}/(main|viins)/}"
+}
+
+# Git branch/dirty indicator
+function git_status_info() {
+    local branch="$(git symbolic-ref --short HEAD 2>/dev/null)"
+    if [[ "$branch" ]]; then
+        local git_status="$(git status --untracked-files=no --porcelain 2>/dev/null)"
+        if [ "$git_status" ]; then
+            local dirty="*";
+        fi
+        echo " <$branch$dirty>"
+    fi
+}
+
+# Runs each time before the shell prompt is printed. We override this to allow
+# zshrc scripts source'd after this one to hook into the prompt by setting
+# $STATUS_EXT. However, we don't allow the prompt itself to be extended because
+# that causes too many strange issues with redrawing and such.
+function precmd() {
+    local _return_code="%(?.%{$fg_bold[green]%}✔ %{$fg[green]%}0 %{$reset_color%}.%{$fg_bold[red]%}✘ %{$fg[red]%}%? %{$reset_color%})"
+    PROMPT="%{${fg[cyan]}%}[%n@%m] %{${fg[green]}%}[%3~]%{$reset_color%}${fg_bold[cyan]}$(git_status_info)$reset_color$STATUS_EXT"$'\n'
+    PROMPT="$PROMPT$_return_code%{${fg_bold[blue]}%}$%{${reset_color}%} "
+    RPROMPT='$(vi_mode_prompt_info)'
+    export PROMPT
+    export RPROMPT
+}
+
+# Set up completion
+autoload -U compinit
+compinit -i
+
+# Compile zcompdump if necessary
+if [ ~/.zcompdump -nt ~/.zcompdump.zwc -o ! -e ~/.zcompdump.zwc ]; then
+  zcompile ~/.zcompdump
+fi
 
 #-------------------------------------------------------------------------------
 
@@ -89,11 +153,12 @@ alias grep='grep --color=always'
 alias egrep='egrep --color=always'
 alias tmux='tmux -2'
 alias irssi='TERM=screen-256color irssi'
-alias g='git'
 alias cgdb='TERM=screen-256color cgdb'
+alias htop='TERM=screen-256color htop'
+alias g='git'
 alias lag='ag --pager=less'
+alias alert='echo -ne "\a"';
 
-bindkey -v
 bindkey '^R' history-incremental-search-backward
 bindkey '^S' history-incremental-search-forward
 bindkey '^[[2~' overwrite-mode              # insert key overwrite mode
@@ -107,21 +172,21 @@ else
 fi
 
 export KEYTIMEOUT=1
-export TERM=xterm-256color
 export EDITOR=vim
 export VISUAL=vim
 
-setopt autocd extendedglob notify completeinword incappendhistory
+setopt autocd extendedglob notify completeinword
 unsetopt sharehistory
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
-zstyle ':urlglobber' url-other-schema  # url-quote-magic is fucking annoying
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+zle -A .self-insert self-insert
 
 autoload select-word-style
 select-word-style shell
 
-alias alert='echo -e "\a"';
-
+# Don't use Ctrl-S/Ctrl-Q for shell flow control
+setopt noflowcontrol
 stty stop undef
 stty start undef
