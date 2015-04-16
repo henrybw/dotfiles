@@ -2,13 +2,13 @@
 Color=0,43,54
 
 [BackgroundIntense]
-Color=44,44,44
+Color=9,32,41
 
 [Color0]
-Color=20,20,20
+Color=0,0,0
 
 [Color0Intense]
-Color=112,144,128
+Color=119,119,119
 
 [Color1]
 Color=255,0,0
@@ -17,46 +17,46 @@ Color=255,0,0
 Color=217,0,0
 
 [Color2]
-Color=0,192,0
+Color=0,187,0
 
 [Color2Intense]
-Color=102,204,0
+Color=85,255,85
 
 [Color3]
-Color=223,175,143
+Color=187,187,0
 
 [Color3Intense]
-Color=255,255,0
+Color=255,255,85
 
 [Color4]
-Color=44,114,199
+Color=30,33,254
 
 [Color4Intense]
-Color=148,191,243
+Color=84,130,254
 
 [Color5]
-Color=220,140,195
+Color=187,0,187
 
 [Color5Intense]
-Color=236,147,211
+Color=255,85,255
 
 [Color6]
-Color=140,208,211
+Color=0,187,187
 
 [Color6Intense]
-Color=147,224,227
+Color=85,255,255
 
 [Color7]
-Color=220,220,204
+Color=221,221,221
 
 [Color7Intense]
 Color=255,255,255
 
 [Foreground]
-Color=220,220,204
+Color=187,187,187
 
 [ForegroundIntense]
-Color=220,220,204
+Color=255,255,255
 
 [General]
 Description=Dark Pastels
