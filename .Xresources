@@ -2,106 +2,67 @@ URxvt*locale: true
 
 ! Set scrollbar.
 URxvt.scrollBar: false
+URxvt*scrollstyle: rxvt
+*.URxvt.urgentOnBell: true
 
 ! Set terminal font.
-URxvt*font: xft:DejaVuSansMono:size=10
-!URxvt.font: xft:Consolas:size=13, xft:Inconsolata for Powerline
-!URxvt*font: xft:Consolas:pixelsize=14:antialias=true:hinting=false,xft:Inconsolata for Powerline,xft:Terminus:size=9:antialias=true:hinting=true
-!URxvt*boldFont: xft:Consolas:bold:pixelsize=14:antialias=true:hinting=false,xft:Inconsolata for Powerline:bold,xft:Terminus:bold:size=9:antialias=true:hinting=true
-!URxvt*font: xft:Terminus:pixelsize=14:antialias=false:hinting=false,xft:Inconsolata for Powerline
-!URxvt*boldFont: xft:Terminus:pixelsize=14:antialias=false:hinting=false,xft:Inconsolata for Powerline:bold
-
-! For solarized colors.
-URxvt.intensityStyles: false
+URxvt*font: xft:Consolas:pixelsize=14:antialias=true:hinting=false,xft:Inconsolata for Powerline,xft:Terminus:size=9:antialias=true:hinting=true
+URxvt*boldFont: xft:Consolas:bold:pixelsize=14:antialias=true:hinting=false,xft:Inconsolata for Powerline:bold,xft:Terminus:bold:size=9:antialias=true:hinting=true
 
 ! Clickable URLs.
 URxvt.perl-ext-common: default,matcher
-!URxvt.url-launcher: /usr/bin/firefox
+URxvt.url-launcher: /usr/bin/google-chrome-stable
 URxvt.matcher.button: 1
 
-! Yankable URLs.
-URxvt.perl-ext: default,url-select
-URxvt.keysym.M-u: perl:url-select:select_next
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.url-select.underline: true
-
-! Solarized color scheme for the X Window System
 !
-! http://ethanschoonover.com/solarized
-
-
-! Common
-
-#define S_yellow #b58900
-#define S_orange #cb4b16
-#define S_red #dc322f
-#define S_magenta #d33682
-#define S_violet #6c71c4
-#define S_blue #268bd2
-#define S_cyan #2aa198
-#define S_green #859900
-
-
-! Dark
-
-#define S_base03 #002b36
-#define S_base02 #073642
-#define S_base01 #586e75
-#define S_base00 #657b83
-#define S_base0 #839496
-#define S_base1 #93a1a1
-#define S_base2 #eee8d5
-#define S_base3 #fdf6e3
-
-
-! Light
-
-! #define S_base03 #fdf6e3
-! #define S_base02 #eee8d5
-! #define S_base01 #93a1a1
-! #define S_base00 #839496
-! #define S_base0 #657b83
-! #define S_base1 #586e75
-! #define S_base2 #073642
-! #define S_base3 #002b36
-
-
-! To only apply colors to your terminal, for example, prefix
-! the color assignment statement with its name. Example:
+! Aurora Xresources colorscheme
 !
-! URxvt*background: S_base03
 
-URxvt*background: S_base03
-URxvt*foreground: S_base0
-URxvt*fading: 0
-URxvt*fadeColor: S_base03
-URxvt*cursorColor: S_base1
-URxvt*pointerColorBackground: S_base01
-URxvt*pointerColorForeground: S_base1
+! For some reason, generic wildcards don't seem to work for these. If you don't
+! use rxvt-unicode, change URxvt to the name of your terminal emulator of choice.
+URxvt*background: #002b36
+URxvt*foreground: #bcbcbc
+URxvt*cursorColor: #bcbcbc
 
-URxvt*color0: S_base02
-URxvt*color1: S_red
-URxvt*color2: S_green
-URxvt*color3: S_yellow
-URxvt*color4: S_blue
-URxvt*color5: S_magenta
-URxvt*color6: S_cyan
-URxvt*color7: S_base2
-URxvt*color8: S_base03
-URxvt*color9: S_orange
-URxvt*color10: S_base01
-URxvt*color11: S_base00
-URxvt*color12: S_base0
-URxvt*color13: S_violet
-URxvt*color14: S_base1
-URxvt*color15: S_base3
+! Normal ANSI color definitions:
+! 0: Black
+! 1: Red
+! 2: Green
+! 3: Yellow
+! 4: Blue
+! 5: Magenta
+! 6: Cyan
+! 7: White
+*color0: #000000
+*color1: #bb0000
+*color2: #00bb00
+*color3: #bbbb00
+*color4: #4359fe
+*color5: #bb00bb
+*color6: #00bbbb
+*color7: #bbbbbb
+
+! Bright ANSI color definitions
+! 8: Black
+! 9: Red
+! 10: Green
+! 11: Yellow
+! 12: Blue
+! 13: Magenta
+! 14: Cyan
+! 15: White
+*color8: #777777
+*color9: #ff5555
+*color10: #55ff55
+*color11: #ffff55
+*color12: #5482ff
+*color13: #ff55ff
+*color14: #55ff55
+*color15: #ffffff
 
 URxvt.letterSpace: -1
 URxvt.keysym.C-equal:   perl:font-size:increase
 URxvt.keysym.C-minus:   perl:font-size:decrease
 URxvt.keysym.C-S-equal: perl:font-size:incglobal
 URxvt.keysym.C-S-minus: perl:font-size:decglobal
-
-URxvt*scrollstyle: rxvt
-*.URxvt.urgentOnBell: true
 
