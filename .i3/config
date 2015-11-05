@@ -194,13 +194,23 @@ bindsym $mod+grave workspace back_and_forth
 bindsym $mod+Ctrl+space exec "$HOME/bin/i3lock-black"
 
 # Volume controls
-bindsym $mod+F8 exec "amixer set Master toggle; killall -USR1 i3status;"
-bindsym $mod+F10 exec "amixer set Master 1%-; killall -USR1 i3status;"
-bindsym $mod+F11 exec "amixer set Master 1%+; killall -USR1 i3status;"
+bindsym Mod1+Ctrl+End   exec "amixer set Master toggle; killall -USR1 i3status;"
+bindsym Mod1+Ctrl+Next  exec "amixer set Master 1%-; killall -USR1 i3status;"
+bindsym Mod1+Ctrl+Prior exec "amixer set Master 1%+; killall -USR1 i3status;"
 
-# Play controls
-bindsym Mod1+Ctrl+Left exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-bindsym Mod1+Ctrl+Down exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+# Volume controls (mirrored for vim feel)
+bindsym Mod1+Ctrl+i     exec "amixer set Headphone toggle; killall -USR1 i3status;"
+bindsym Mod1+Ctrl+j     exec "amixer set Headphone 1%-; killall -USR1 i3status;"
+bindsym Mod1+Ctrl+k     exec "amixer set Headphone 1%+; killall -USR1 i3status;"
+
+# Play controls (vim / headphone bindings)
+bindsym Mod1+Ctrl+h     exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym Mod1+Ctrl+u     exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym Mod1+Ctrl+l     exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+
+# Play controls (pleb bindings)
+bindsym Mod1+Ctrl+Left  exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym Mod1+Ctrl+Down  exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 bindsym Mod1+Ctrl+Right exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
 # Other settings
@@ -218,32 +228,8 @@ bar {
             inactive_workspace #979797 #000000
             urgent_workspace #C60000 #000000
         }
-#}
-#bar {
-        status_command i3status | ~/bin/i3wrapper.py
-#       position top
-#       font "pango:Tahoma 8"
-#       workspace_buttons no
-#       status_command ~/.i3/conky
-#       colors { 
-#               statusline #AAAAAA
-#               background #333333
-#               focused_workspace #333333 #333333 #FFFFFF
-#               inactive_workspace #484848 #484848 #AAAAAA
-#       }
+        status_command i3blocks
 }
-
-# Inspired by http://hndr.me/blog/making-my-new-linux-less-ugly/
-# class                 border  backgr. text    indicator
-#client.focused          #3F8AC2 #096BAA #ffffff #00DA8E
-#client.focused_inactive #333333 #5F676A #ffffff #484e50
-#client.unfocused        #333333 #424242 #888888 #292d2e
-#client.urgent           #C10004 #900000 #ffffff #900000
-
-#client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
-
-# otherwise Spotify goes berserk for some reason :/
-#for_window [class="^Spotify$"] floating enable
 
 # Auto start certain programs in workspaces I want
 #exec --no-startup-id i3-msg 'workspace 3; exec /usr/bin/chromium;'
