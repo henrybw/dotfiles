@@ -14,20 +14,65 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/bufkill.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'henrybw/vim-colors-aurora'
+Plug '$HOME/.config/nvim/custom/highlight-ctypes'
 
 call plug#end()
 
-" Set up cscope plugin if we don't have a cscope database already
-redir => s:has_cscope_database
-silent cs show
-redir END
-if substitute(s:has_cscope_database, '^\n*\(.\{-}\)\n*$', '\1', '') == "no cscope connections"
-    source $HOME/.vim/bundle/cscope/cscope_maps.vim
+if has("cscope")
+    set csto=0
+    set cst
+    set nocsverb
+    set cscopequickfix=
+    " add any database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+    " else add database pointed to by environment
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+    set csverb
 endif
 
-" Enable plugins that need to be manually run
-source $HOME/.vim/bundle/closetag/closetag.vim
-source $HOME/.vim/bundle/matchit/plugin/matchit.vim
+" To do the first type of search, hit 'CTRL-\', followed by one of the
+" cscope search types above (s,g,c,t,e,f,i,d).  The result of your cscope
+" search will be displayed in the current window.  You can use CTRL-T to
+" go back to where you were before the search.
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+" Using 'CTRL-spacebar' (intepreted as CTRL-@ by vim) then a search type
+" makes the vim window split horizontally, with search result displayed in
+" the new window.
+"
+" (Note: earlier versions of vim may not have the :scs command, but it
+" can be simulated roughly via:
+"    nmap <C-@>s <C-W><C-S> :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@>i :scs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
+
+
+" Hitting CTRL-space *twice* before the search type does a vertical
+" split instead of a horizontal one (vim 6 and up only)
+nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@><C-@>i :vert scs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 " For the CtrlP plugin
 let g:ctrlp_map = '<C-p>'
@@ -78,10 +123,6 @@ set nosplitbelow
 
 " Make diff windows open as vertical splits by default
 set diffopt=filler,vertical
-
-" Some special magic to get full 256 colors working in terminals
-set t_ut=
-set t_Co=256
 
 " This seems to have a net effect of batching screen updates, resulting in very
 " large redraw events occuring when, for example, switching tmux windows. Over a
@@ -204,20 +245,6 @@ nnoremap Q <ESC>
 
 set mouse=a
 
-" Fix weird 223-char terminal limit to be unlimited
-if has('mouse_sgr')
-    set ttymouse=sgr
-endif
-
-" Nim idetools support (basically ctags for nim)
-fun! JumpToDef()
-    if exists("*GotoDefinition_" . &filetype)
-        call GotoDefinition_{&filetype}()
-    else
-        exe "norm! \<C-]>"
-    endif
-endf
-
 " Disable SQL omnicompletion because it makes Esc super slow
 let g:omni_sql_no_default_maps = 1
 let g:ftplugin_sql_omni_key = '<Plug>DisableSqlOmni'
@@ -292,7 +319,6 @@ autocmd FileType * call SetFiletypeConditionalConfig()
 " Miscellaneous settings
 "
 
-set nocompatible
 set history=100
 set printoptions=syntax:y,wrap:y
 
