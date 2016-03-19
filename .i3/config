@@ -30,6 +30,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+c kill
 
 # start dmenu (a program launcher)
 # ("run")
@@ -69,7 +70,7 @@ bindsym $mod+Ctrl+l workspace next
 
 # alternatively, you can use the cursor keys:
 # (disabled for spotify control)
-#bindsym $mod+Ctrl+Left workspace prev
+#bindsym $cod+Ctrl+Left workspace prev
 #bindsym $mod+Ctrl+Right workspace next
 
 # move workspace between monitors
@@ -117,29 +118,73 @@ bindsym $mod+Shift+equal move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+equal scratchpad show
 
+workspace 1           output DVI-I-2
+workspace 2           output DVI-I-2
+workspace 3           output DVI-I-2
+workspace 4           output DVI-I-2
+workspace 5           output DVI-I-2
+#workspace "1 6"             output DVI-I-2
+#workspace "1 7"             output DVI-I-2
+#workspace "1 8"             output DVI-I-2
+#workspace "1 9"             output DVI-I-2
+#workspace "1 10"            output DVI-I-2
+
+#workspace "2 1"             output DVI-I-3
+#workspace "2 2"             output DVI-I-3
+#workspace "2 3"             output DVI-I-3
+#workspace "2 4"             output DVI-I-3
+#workspace "2 5"             output DVI-I-3
+workspace 6           output DVI-I-3
+workspace 7           output DVI-I-3
+workspace 8           output DVI-I-3
+workspace 9           output DVI-I-3
+workspace 10          output DVI-I-3
+
 # switch to workspace
-bindsym $mod+1 workspace number 1
-bindsym $mod+2 workspace number 2
-bindsym $mod+3 workspace number 3
-bindsym $mod+4 workspace number 4
-bindsym $mod+5 workspace number 5
-bindsym $mod+6 workspace number 6
-bindsym $mod+7 workspace number 7
-bindsym $mod+8 workspace number 8
-bindsym $mod+9 workspace number 9
-bindsym $mod+0 workspace number 10
+bindsym $mod+1              workspace number 1
+bindsym $mod+2              workspace number 2
+bindsym $mod+3              workspace number 3
+bindsym $mod+4              workspace number 4
+bindsym $mod+5              workspace number 5
+bindsym $mod+6              workspace number 6
+bindsym $mod+7              workspace number 7
+bindsym $mod+8              workspace number 8
+bindsym $mod+9              workspace number 9
+bindsym $mod+0              workspace number 10
+
+bindsym $mod+Ctrl+1         workspace number 6
+bindsym $mod+Ctrl+2         workspace number 7
+bindsym $mod+Ctrl+3         workspace number 8
+bindsym $mod+Ctrl+4         workspace number 9
+bindsym $mod+Ctrl+5         workspace number 10
+#bindsym $mod+Ctrl+6         workspace 2 6
+#bindsym $mod+Ctrl+7         workspace 2 7
+#bindsym $mod+Ctrl+8         workspace 2 7
+#bindsym $mod+Ctrl+9         workspace 2 9
+#bindsym $mod+Ctrl+0         workspace 2 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number 1
-bindsym $mod+Shift+2 move container to workspace number 2
-bindsym $mod+Shift+3 move container to workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
+bindsym $mod+Shift+1        move container to workspace number 1
+bindsym $mod+Shift+2        move container to workspace number 2
+bindsym $mod+Shift+3        move container to workspace number 3
+bindsym $mod+Shift+4        move container to workspace number 4
+bindsym $mod+Shift+5        move container to workspace number 5
+bindsym $mod+Shift+6        move container to workspace number 6
+bindsym $mod+Shift+7        move container to workspace number 7
+bindsym $mod+Shift+8        move container to workspace number 8
+bindsym $mod+Shift+9        move container to workspace number 9
+bindsym $mod+Shift+0        move container to workspace number 10
+
+bindsym $mod+Ctrl+Shift+1   move container to workspace number 6
+bindsym $mod+Ctrl+Shift+2   move container to workspace number 7
+bindsym $mod+Ctrl+Shift+3   move container to workspace number 8
+bindsym $mod+Ctrl+Shift+4   move container to workspace number 9
+bindsym $mod+Ctrl+Shift+5   move container to workspace number 10
+#bindsym $mod+Ctrl+Shift+6   move container to workspace 2 6
+#bindsym $mod+Ctrl+Shift+7   move container to workspace 2 7
+#bindsym $mod+Ctrl+Shift+8   move container to workspace 2 8
+#bindsym $mod+Ctrl+Shift+9   move container to workspace 2 9
+#bindsym $mod+Ctrl+Shift+0   move container to workspace 2 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -194,14 +239,14 @@ bindsym $mod+grave workspace back_and_forth
 bindsym $mod+Ctrl+space exec "$HOME/bin/i3lock-bg"
 
 # Volume controls
-bindsym Mod1+Ctrl+End   exec "amixer set Master toggle; killall -USR1 i3status;"
-bindsym Mod1+Ctrl+Next  exec "amixer set Master 1%-; killall -USR1 i3status;"
-bindsym Mod1+Ctrl+Prior exec "amixer set Master 1%+; killall -USR1 i3status;"
+bindsym Mod1+Ctrl+End   exec "amixer set Master toggle; pkill -RTMIN+1 i3blocks
+bindsym Mod1+Ctrl+Next  exec "amixer set Master 1%-; pkill -RTMIN+1 i3blocks
+bindsym Mod1+Ctrl+Prior exec "amixer set Master 1%+; pkill -RTMIN+1 i3blocks
 
 # Volume controls (mirrored for vim feel)
-bindsym Mod1+Ctrl+i     exec "amixer set Headphone toggle; killall -USR1 i3status;"
-bindsym Mod1+Ctrl+j     exec "amixer set Headphone 1%-; killall -USR1 i3status;"
-bindsym Mod1+Ctrl+k     exec "amixer set Headphone 1%+; killall -USR1 i3status;"
+bindsym Mod1+Ctrl+m     exec "amixer set Headphone toggle; pkill -RTMIN+1 i3blocks
+bindsym Mod1+Ctrl+j     exec "amixer set Headphone 1%-; pkill -RTMIN+1 i3blocks
+bindsym Mod1+Ctrl+k     exec "amixer set Headphone 1%+; pkill -RTMIN+1 i3blocks
 
 # Play controls (vim / headphone bindings)
 bindsym Mod1+Ctrl+h     exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
@@ -215,7 +260,7 @@ bindsym Mod1+Ctrl+Right exec "dbus-send --print-reply --dest=org.mpris.MediaPlay
 
 # Somewhat of a "dev" workspace setup, similar to the "main-vertical" setup in
 # tmux.
-bindsym $mod+Shift+G    resize shrink width 50px; resize shrink width 50px
+bindsym $mod+Shift+G    resize grow width 50px; resize grow width 50px
 
 # Other settings
 focus_follows_mouse yes
