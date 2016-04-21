@@ -6,4 +6,3 @@ syn match    cCustomClass    "\w\+\s*::" contains=cCustomScope
 
 hi def link cCustomFunc  Function
 hi def link cCustomClass Function
-
