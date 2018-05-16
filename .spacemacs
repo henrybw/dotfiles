@@ -1069,6 +1069,7 @@ function name font face."
 
   (defun c-mode-common-settings ()
     ;; C/C++ formatting style should be K&R, but with 4-space indents
+    (c-set-style "k&r")
     (setq c-default-style "k&r")
     (setq c-basic-offset 4)
     (setq evil-shift-width 4)  ; FOR SRS
@@ -1098,8 +1099,7 @@ function name font face."
 
     ;; Highlight function calls and #if 0 blocks
     (font-lock-add-keywords nil
-                            '(
-                              ;; XXX HBW - this doesn't work reliably, and can get dropped in
+                            '(;; XXX HBW - this doesn't work reliably, and can get dropped in
                               ;; certain cases (like when undoing an edit inside a function name).
                               (c-mode-highlight-function-calls . font-lock-function-name-face)
                               ;; Sometimes operations like undo will confuse font-lock and the
@@ -1110,6 +1110,7 @@ function name font face."
     )
 
   (add-hook 'c-mode-common-hook 'c-mode-common-settings)
+  (remove-hook 'c-mode-common-hook 'spacemacs//c-toggle-auto-newline)
 
   (add-hook 'shell-mode-hook
             (lambda ()
