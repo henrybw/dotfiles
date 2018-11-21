@@ -64,4 +64,4 @@ resetcolor="\[\033[0m\]"   # terminal default
 # terminals so that they won't beep at me for every line.
 title="\[\033]0;b:\w\007\r\]"
 
-export PS1="$resetterm$hostcolor[\u@\h]$normcolor - [\w]\n[\$?] \$(if [[ \$? == 0 ]]; then echo \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\"; fi)\[\033[00m\] \$ "
+export PS1="$resetterm$hostcolor[\u@\h]$normcolor - [\w]\$STATUS_EXT\n[\$?] \$(if [ \$? == 0 ]; then echo \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\"; fi)\[\033[00m\] \$ "
