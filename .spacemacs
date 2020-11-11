@@ -24,9 +24,8 @@ This function should only modify configuration layer settings."
 
    ;; If non-nil then Spacemacs will ask for confirmation before installing
    ;; a layer lazily. (default t)
-   dotspacemacs-ask-for-lazy-installation nil
+   dotspacemacs-ask-for-lazy-installation t
 
-   ;; If non-nil layers with lazy install support are lazy installed.
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
    dotspacemacs-configuration-layer-path '()
@@ -39,21 +38,28 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
      better-defaults
-     emacs-lisp
-     lua
-     rust
      c-c++
-     python
+     cmake
+     cscope
+     emacs-lisp
      git
+     helm
+     ;; (helm :variables
+     ;;       helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
+     ;; lsp
+     lua
+     ;; osx
      markdown
      org
-     cscope
+     python
+     rust
      (shell :variables
             shell-default-shell 'ansi-term
             shell-default-height 30
             shell-default-position 'bottom)
+     treemacs
+     ;; windows-scripts
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -64,9 +70,11 @@ This function should only modify configuration layer settings."
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages
    '(
-     undo-tree
      bison-mode
+     fill-column-indicator
      fzf
+     racer
+     undo-tree
      ;; XXX HBW - local doesn't work for some reason...
      (borealis :location "~/.emacs.d/private/local")
      )
@@ -75,7 +83,8 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(smartparens)
+   dotspacemacs-excluded-packages '(smartparens
+                                    anaconda-mode)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -99,6 +108,25 @@ It should only modify the values of Spacemacs settings."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
+   ;; If non-nil then enable support for the portable dumper. You'll need
+   ;; to compile Emacs 27 from source following the instructions in file
+   ;; EXPERIMENTAL.org at to root of the git repository.
+   ;; (default nil)
+   dotspacemacs-enable-emacs-pdumper nil
+
+   ;; Name of executable file pointing to emacs 27+. This executable must be
+   ;; in your PATH.
+   ;; (default "emacs")
+   dotspacemacs-emacs-pdumper-executable-file "emacs"
+
+   ;; Name of the Spacemacs dump file. This is the file will be created by the
+   ;; portable dumper in the cache directory under dumps sub-directory.
+   ;; To load it when starting Emacs add the parameter `--dump-file'
+   ;; when invoking Emacs 27.1 executable on the command line, for instance:
+   ;;   ./emacs --dump-file=$HOME/.emacs.d/.cache/dumps/spacemacs-27.1.pdmp
+   ;; (default spacemacs-27.1.pdmp)
+   dotspacemacs-emacs-dumper-dump-file (format "spacemacs-%s.pdmp" emacs-version)
+
    ;; If non-nil ELPA repositories are contacted via HTTPS whenever it's
    ;; possible. Set it to nil if you have no way to use HTTPS in your
    ;; environment, otherwise it is strongly recommended to let it set to t.
@@ -117,14 +145,21 @@ It should only modify the values of Spacemacs settings."
    ;; (default '(100000000 0.1))
    dotspacemacs-gc-cons '(100000000 0.1)
 
+   ;; Set `read-process-output-max' when startup finishes.
+   ;; This defines how much data is read from a foreign process.
+   ;; Setting this >= 1 MB should increase performance for lsp servers
+   ;; in emacs 27.
+   ;; (default (* 1024 1024))
+   dotspacemacs-read-process-output-max (* 1024 1024)
+
    ;; If non-nil then Spacelpa repository is the primary source to install
    ;; a locked version of packages. If nil then Spacemacs will install the
    ;; latest version of packages from MELPA. (default nil)
    dotspacemacs-use-spacelpa nil
 
    ;; If non-nil then verify the signature for downloaded Spacelpa archives.
-   ;; (default nil)
-   dotspacemacs-verify-spacelpa-archives nil
+   ;; (default t)
+   dotspacemacs-verify-spacelpa-archives t
 
    ;; If non-nil then spacemacs will check for updates at startup
    ;; when the current branch is not `develop'. Note that checking for
@@ -227,8 +262,10 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-major-mode-leader-key ","
 
    ;; Major mode leader key accessible in `emacs state' and `insert state'.
-   ;; (default "C-M-m")
-   dotspacemacs-major-mode-emacs-leader-key "C-M-m"
+   ;; (default "C-M-m" for terminal mode, "<M-return>" for GUI mode).
+   ;; Thus M-RET should work as leader key in both GUI and terminal modes.
+   ;; C-M-m also should work in terminal mode, but not in GUI mode.
+   dotspacemacs-major-mode-emacs-leader-key (if window-system "<M-return>" "C-M-m")
 
    ;; These variables control whether separate commands are bound in the GUI to
    ;; the key pairs `C-i', `TAB' and `C-m', `RET'.
@@ -448,6 +485,13 @@ It should only modify the values of Spacemacs settings."
    ;; (default t)
    dotspacemacs-use-clean-aindent-mode t
 
+   ;; If non-nil shift your number row to match the entered keyboard layout
+   ;; (only in insert state). Currently supported keyboard layouts are:
+   ;; `qwerty-us', `qwertz-de' and `querty-ca-fr'.
+   ;; New layouts can be added in `spacemacs-editing' layer.
+   ;; (default nil)
+   dotspacemacs-swap-number-row nil
+
    ;; Either nil or a number of seconds. If non-nil zone out after the specified
    ;; number of seconds. (default nil)
    dotspacemacs-zone-out-when-idle nil
@@ -455,7 +499,11 @@ It should only modify the values of Spacemacs settings."
    ;; Run `spacemacs/prettify-org-buffer' when
    ;; visiting README.org files of Spacemacs.
    ;; (default nil)
-   dotspacemacs-pretty-docs nil)
+   dotspacemacs-pretty-docs nil
+
+   ;; If nil the home buffer shows the full path of agenda items
+   ;; and todos. If non nil only the file name is shown.
+   dotspacemacs-home-shorten-agenda-source nil)
 
   ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
   ;; size to make separators look not too crappy.
@@ -466,61 +514,62 @@ It should only modify the values of Spacemacs settings."
                                                    :width normal)))
         ((equal system-type 'gnu/linux)
          (setq-default dotspacemacs-default-font '("DejaVu Sans Mono"
-                                                   :size 14
+                                                   :size 12
                                                    :weight normal
                                                    :width normal
                                                    :powerline-scale 1.0)))
         ((equal system-type 'windows-nt)
-         (setq-default dotspacemacs-default-font '("DejaVu Sans Mono"
+         (setq-default dotspacemacs-default-font '("Cascadia Mono"
                                                    :size 12
-                                                   :weight bold
-                                                   :width normal
-                                                   :powerline-scale 1.0)))
+                                                   :weight normal
+                                                   :width normal)))
         ((equal system-type 'cygwin)
-         (setq-default dotspacemacs-default-font '("Consolas"
+         (setq-default dotspacemacs-default-font '("Cascadia Mono"
                                                    :size 12
                                                    :weight normal
                                                    :width normal)))
         (setq-default dotspacemacs-default-font '("Source Code Pro"
                                                   :size 12
                                                   :weight normal
-                                                  :width normal
-                                                  :powerline-scale 1.1)))
-  )
+                                                  :width normal)))
+   )
+
+(defun dotspacemacs/user-env ()
+  "Environment variables setup.
+This function defines the environment variables for your Emacs session. By
+default it calls `spacemacs/load-spacemacs-env' which loads the environment
+variables declared in `~/.spacemacs.env' or `~/.spacemacs.d/.spacemacs.env'.
+See the header of this file for more information."
+  (spacemacs/load-spacemacs-env))
 
 (defun dotspacemacs/user-init ()
-  "Initialization function for user code.
-It is called immediately after `dotspacemacs/init', before layer configuration
-executes.
- This function is mostly useful for variables that need to be set
-before packages are loaded. If you are unsure, you should try in setting them in
-`dotspacemacs/user-config' first."
+  "Initialization for user code:
+This function is called immediately after `dotspacemacs/init', before layer
+configuration.
+It is mostly for variables that should be set before packages are loaded.
+If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   ;; This makes up/down work during isearch
   (setq-default evil-search-module 'evil-search)
-
-  ;; irony-mode settings (disabled for now)
-  (setq-default dotspacemacs-configuration-layers
-                '((c-c++ :variables c-c++-enable-clang-support nil)))
-
-  ;; Squelch "install this layer" prompts
-  (setq-default dotspacemacs-enable-lazy-installation nil)
-
-  (setq tramp-ssh-controlmaster-options
-        "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
 
   ;; Yes, I set environment variables in my .zshrc. It's not good practice, but
   ;; you don't need to keep reminding me about that, emacs...
   (setq-default exec-path-from-shell-check-startup-files nil)
   )
 
+(defun dotspacemacs/user-load ()
+  "Library to load while dumping.
+This function is called only while dumping Spacemacs configuration. You can
+`require' or `load' the libraries of your choice that will be included in the
+dump."
+  )
+
 (defun dotspacemacs/user-config ()
-  "Configuration function for user code.
-This function is called at the very end of Spacemacs initialization after
-layers configuration.
-This is the place where most of your configurations should be done. Unless it is
-explicitly specified that a variable should be set before a package is loaded,
-you should place your code here."
+  "Configuration for user code:
+This function is called at the very end of Spacemacs startup, after layer
+configuration.
+Put your configuration code here, except for variables that should be set
+before packages are loaded."
 
   ;;;
   ;;; Utilities
@@ -544,7 +593,7 @@ you should place your code here."
   (defun evil-define-key-for-states (states keycode handler)
     "Defines a keybinding mapping KEYCODE to HANDLER only for the evil state
 maps STATES."
-    (loop for state in states
+    (cl-loop for state in states
           collect (define-key (symbol-value state) keycode handler)))
 
   (defvar evil-non-insert-states '(evil-normal-state-map
@@ -621,7 +670,10 @@ maps STATES."
   (setq-default evil-want-Y-yank-to-eol t)
 
   ;; Muscle memory from my vimrc leader keybindings
-  (evil-leader/set-key (kbd "\\") 'spacemacs/toggle-fill-column-indicator)
+  ;; XXX if one of the following fill-column-indicator functions fails, try a
+  ;; different one: at least one of them usually works.
+  ;; (evil-leader/set-key (kbd "\\") 'spacemacs/toggle-fill-column-indicator)
+  (evil-leader/set-key (kbd "\\") 'display-fill-column-indicator-mode)
   (evil-leader/set-key (kbd "RET") 'delete-trailing-whitespace)
 
   ;; SPC-` is already defined to something, which overrides our binding
@@ -649,8 +701,8 @@ maps STATES."
            ("f" . helm-cscope-find-this-file)
            ("i" . helm-cscope-find-files-including-file)
            ("a" . helm-cscope-find-assignments-to-this-symbol))))
-    (loop for key-map in cscope-key-maps
-          collect (lexical-let* ((key (car key-map))
+    (cl-loop for key-map in cscope-key-maps
+          collect (let* ((key (car key-map))
                                  (handler (cdr key-map)))
                     (evil-ex-define-cmd (replace-regexp-in-string
                                          "helm-" "" (symbol-name handler))
@@ -972,10 +1024,6 @@ remove the comment characters from that line."
   ;; Hide menu bar
   (menu-bar-mode -1)
 
-  ;; When in terminal, change the modeline to be more vim-like, because it
-  ;; and symbols as much.
-  (powerline-vim-theme)
-
   ;; Always display column number
   (setq-default column-number-mode t)
 
@@ -998,9 +1046,6 @@ remove the comment characters from that line."
 
   ;; Skip the startup message and display first buffer directly
   (setq-default inhibit-startup-message t)
-
-  ;; Make powerline separator an arrow like it is in vim by default
-  (setq powerline-default-separator 'arrow)
 
   ;; Disable the built-in VC package, which gets picked up by the modeline,
   ;; because we use per-VCS tools instead (e.g. magit). Plus, at least for git,
@@ -1170,7 +1215,11 @@ function name font face."
                               (setq evil-shift-width 4)  ; FOR SRS
                               ))
   (add-hook 'rust-mode-hook #'racer-mode)
-  (add-hook 'racer-mode-hook #'eldoc-mode)
+
+  (add-hook 'cmake-mode-hook
+            (lambda ()
+              (setq tab-width 4)  ; FOR SRS
+              (setq cmake-tab-width 4)))
 
   (add-to-list 'auto-mode-alist '("\\.m\\'" . objc-mode))
 
@@ -1178,6 +1227,11 @@ function name font face."
   (enable-theme 'borealis)
   (set-transparent-bg)
   (setq fci-rule-color "#afafaf")
+
+  ;; stolen from keybindings.el from spacemacs
+  (let ((dotfile-setting (cons dotspacemacs-active-transparency
+                               dotspacemacs-inactive-transparency)))
+    (spacemacs/enable-transparency (selected-frame) dotfile-setting))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
