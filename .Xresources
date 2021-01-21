@@ -1,25 +1,32 @@
 URxvt*locale: true
 
 ! Set scrollbar.
-URxvt.scrollBar: false
-URxvt*scrollstyle: rxvt
-*.URxvt.urgentOnBell: true
+urxvt.scrollBar: false
 
-! Set terminal font.
-URxvt*font: xft:Consolas:pixelsize=14:antialias=true:hinting=false,xft:Inconsolata for Powerline,xft:Terminus:size=9:antialias=true:hinting=true
-URxvt*boldFont: xft:Consolas:bold:pixelsize=14:antialias=true:hinting=false,xft:Inconsolata for Powerline:bold,xft:Terminus:bold:size=9:antialias=true:hinting=true
+urxvt.font: xft:Hack:pixelsize=12:antialias=true:autohint=true
+urxvt.boldfont: xft:Hack:pixelsize=12:bold:antialias=true:autohint=true
+urxvt.letterSpace:-4
+urxvt.buffered: false
+*.urxvt.urgentOnBell: true
 
 ! Clickable URLs.
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/google-chrome-stable
-URxvt.matcher.button: 1
+urxvt.perl-ext-common: default,matcher
+!urxvt.url-launcher: /usr/bin/firefox
+urxvt.matcher.button: 1
+
+! Yankable URLs.
+urxvt.perl-ext: default,url-select
+urxvt.keysym.M-u: perl:url-select:select_next
+urxvt.url-launcher: /usr/bin/xdg-open
+urxvt.url-select.underline: true
 
 !
 ! Aurora Xresources colorscheme
 !
 
 ! For some reason, generic wildcards don't seem to work for these. If you don't
-! use rxvt-unicode, change URxvt to the name of your terminal emulator of choice.
+! use rxvt-unicode, change URxvt to the name of your terminal emulator of
+! choice.
 URxvt*background: #002b36
 URxvt*foreground: #bcbcbc
 URxvt*cursorColor: #bcbcbc
@@ -34,10 +41,10 @@ URxvt*cursorColor: #bcbcbc
 ! 6: Cyan
 ! 7: White
 *color0: #000000
-*color1: #bb0000
+*color1: #dd0000
 *color2: #00bb00
 *color3: #bbbb00
-*color4: #4359fe
+*color4: #1e21fe
 *color5: #bb00bb
 *color6: #00bbbb
 *color7: #bbbbbb
@@ -57,12 +64,95 @@ URxvt*cursorColor: #bcbcbc
 *color11: #ffff55
 *color12: #5482ff
 *color13: #ff55ff
-*color14: #55ff55
+*color14: #55ffff
+*color15: #ffffff!
+! Aurora Xresources colorscheme
+!
+
+! For some reason, generic wildcards don't seem to work for these. If you don't
+! use rxvt-unicode, change URxvt to the name of your terminal emulator of
+! choice.
+URxvt*background: #002b36
+URxvt*foreground: #bcbcbc
+URxvt*cursorColor: #bcbcbc
+
+! Normal ANSI color definitions:
+! 0: Black
+! 1: Red
+! 2: Green
+! 3: Yellow
+! 4: Blue
+! 5: Magenta
+! 6: Cyan
+! 7: White
+*color0: #000000
+*color1: #dd0000
+*color2: #00bb00
+*color3: #bbbb00
+*color4: #1e21fe
+*color5: #bb00bb
+*color6: #00bbbb
+*color7: #bbbbbb
+
+! Bright ANSI color definitions
+! 8: Black
+! 9: Red
+! 10: Green
+! 11: Yellow
+! 12: Blue
+! 13: Magenta
+! 14: Cyan
+! 15: White
+*color8: #777777
+*color9: #ff5555
+*color10: #55ff55
+*color11: #ffff55
+*color12: #5482ff
+*color13: #ff55ff
+*color14: #55ffff
+*color15: #ffffff!
+! Aurora Xresources colorscheme
+!
+
+! For some reason, generic wildcards don't seem to work for these. If you don't
+! use rxvt-unicode, change URxvt to the name of your terminal emulator of
+! choice.
+URxvt*background: #002b36
+URxvt*foreground: #bcbcbc
+URxvt*cursorColor: #bcbcbc
+
+! Normal ANSI color definitions:
+! 0: Black
+! 1: Red
+! 2: Green
+! 3: Yellow
+! 4: Blue
+! 5: Magenta
+! 6: Cyan
+! 7: White
+*color0: #000000
+*color1: #dd0000
+*color2: #00bb00
+*color3: #bbbb00
+*color4: #1e21fe
+*color5: #bb00bb
+*color6: #00bbbb
+*color7: #bbbbbb
+
+! Bright ANSI color definitions
+! 8: Black
+! 9: Red
+! 10: Green
+! 11: Yellow
+! 12: Blue
+! 13: Magenta
+! 14: Cyan
+! 15: White
+*color8: #777777
+*color9: #ff5555
+*color10: #55ff55
+*color11: #ffff55
+*color12: #5482ff
+*color13: #ff55ff
+*color14: #55ffff
 *color15: #ffffff
-
-URxvt.letterSpace: -1
-URxvt.keysym.C-equal:   perl:font-size:increase
-URxvt.keysym.C-minus:   perl:font-size:decrease
-URxvt.keysym.C-S-equal: perl:font-size:incglobal
-URxvt.keysym.C-S-minus: perl:font-size:decglobal
-
